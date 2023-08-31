@@ -2,11 +2,11 @@
 :root {
 	/* Colores */
 	--principal: #490617;
-	--secondary: #0C0404;
-	--black: #2D2D2D;
-	--gray: #9B9B9B;
-	--ligth-gray: #EDE4E5;
-	--white: #FAFAFA;
+	--secondary: #0c0404;
+	--black: #2d2d2d;
+	--gray: #9b9b9b;
+	--ligth-gray: #ede4e5;
+	--white: #fafafa;
 
 	/* Tipografía */
 	--type-princpial: 'Inter', sans-serif;
@@ -43,6 +43,7 @@
 	box-sizing: border-box;
 	vertical-align: baseline;
 }
+
 *::before,
 *::after {
 	display: block;
@@ -70,6 +71,7 @@ a {
 	color: inherit;
 	font-size: inherit;
 }
+
 /* ... excepto los que se encuentran en párrafos */
 p a {
 	display: inline;
@@ -107,6 +109,7 @@ em {
 	text-decoration: none;
 	color: inherit;
 }
+
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
 blockquote:after,

@@ -4,3 +4,9 @@
 	justify-content: $just;
 	align-items: $aling;
 }
+
+@mixin media ($value : 700px) {
+	@media screen and (max-width : $value) {
+		@content	
+	}
+}
