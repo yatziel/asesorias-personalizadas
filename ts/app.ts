@@ -1,4 +1,8 @@
-const menuButton = document.getElementById('menuButton');
+'use strict';
+
+console.log('🎈 Beep Beep Richie');
+
+/* const menuButton = document.getElementById('menuButton');
 const menuMobile = document.getElementById('menuMobile');
 
 menuButton.addEventListener('click', () => {
@@ -10,3 +14,4 @@ document.querySelectorAll('.menu-link').forEach((n) =>
 		menuMobile.classList.remove('menu-show');
 	})
 );
+ */
