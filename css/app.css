@@ -2,16 +2,21 @@
 /* Definimos las Custom properties */
 :root {
   /* Colores */
-  --negro: #393939;
+  --principal: #490617;
+  --secondary: #0C0404;
+  --black: #2D2D2D;
+  --gray: #9B9B9B;
+  --ligth-gray: #EDE4E5;
+  --white: #FAFAFA;
   /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana;
+  --type-princpial: "Inter", sans-serif;
+  --type-secondary: "Crimson Pro";
 }
 
 /* (Opcional) Las adaptamos al modo oscuro */
 /* @media (prefers-color-scheme: dark) {
   :root{
-      --negro         : #ececec;
+      --black         : #ececec;
   }
 } */
 /* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
@@ -116,12 +121,12 @@ q:after {
 
 /* (Opcional) Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--principal);
+  color: var(--white);
 }
 ::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--principal);
+  color: var(--white);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -161,8 +166,9 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: var(--tipo-principal);
-  color: var(--negro);
+  font-family: var(--type-princpial);
+  color: var(--black);
+  background-color: var(--white);
   /* (Opcional) */
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
@@ -173,6 +179,124 @@ body {
   -webkit-font-smoothing: antialiased;
   /* (Opcional) */
   -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid var(--ligth-gray);
+}
+.header-content {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: var(--principal);
+}
+.header-tagline {
+  font-size: 0.625rem;
+  font-family: var(--type-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.225rem;
+}
+.header-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.header-a {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.header-a:hover {
+  color: var(--principal);
+}
+.header-a::after {
+  content: "•";
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.header-a:hover::after {
+  color: var(--principal);
+  opacity: 1;
+}
+.header-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--principal);
+  color: var(--white);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.header-link:hover {
+  background-color: var(--secondary);
+}
+.header-svg {
+  width: auto;
+}
+.header-button {
+  display: none;
 }
 
 /* .navbar {
@@ -311,3 +435,8 @@ body {
 		padding: 16px 0;
 	}
 } */
+.wrapper {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
