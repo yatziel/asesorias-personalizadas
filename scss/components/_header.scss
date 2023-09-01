@@ -1,6 +1,7 @@
 .header {
 	width: 100%;
 	position: fixed;
+	z-index: 20;
 	top: 0;
 	border-bottom: 1px solid var(--ligth-gray);
 	box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
@@ -158,6 +159,7 @@
 	}
 
 	&-svg {
+		fill: var(--white);
 		width: 1.5em;
 	}
 

@@ -1,0 +1,45 @@
+.programs {
+	background-color: darkslateblue;
+	&-cover {
+		padding: 4rem 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		background-color: lightcoral;
+	}
+	&-controls {
+		margin-top: 1rem;
+		@include flex(row, nowrap, center, start);
+		gap: .5rem;
+	}
+	&-arrow {
+		width: 4em;
+		height: 4em;
+	}
+	&-slides {
+		border-radius: 1rem;
+		background-color: var(--principal);
+		overflow: hidden;
+	}
+	&-slide {
+		color: var(--white);
+		@include flex(row, nowrap, space-between, center)
+	}
+	&-image {}
+	&-title {
+		font-size: 2em;
+	}
+	&-description {}
+	&-bullets {
+		@include flex(row, nowrap, start, center);
+		gap:1em;
+	}
+	&-bullet {
+		@include flex(row, nowrap, start, center);
+		gap: .5em;
+	}
+	&-svg {
+		width: 1em;
+		height: 1em;
+	}
+	&-text {}	
+}

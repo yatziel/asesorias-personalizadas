@@ -84,7 +84,7 @@ li {
 
 /* (Opcional) Configuramos anclas suaves */
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
@@ -159,7 +159,6 @@ td {
 svg {
   width: 100%;
   display: block;
-  fill: currentColor;
 }
 
 /* Configuramos la tipografía para toda la web */
@@ -170,9 +169,9 @@ body {
   color: var(--black);
   background-color: var(--white);
   /* (Opcional) */
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
   /* (Opcional) */
   font-smooth: always;
   /* (Opcional) */
@@ -184,6 +183,7 @@ body {
 .header {
   width: 100%;
   position: fixed;
+  z-index: 20;
   top: 0;
   border-bottom: 1px solid var(--ligth-gray);
   -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
@@ -400,6 +400,7 @@ body {
   }
 }
 .header-svg {
+  fill: var(--white);
   width: 1.5em;
 }
 .header-button {
@@ -415,8 +416,336 @@ body {
   }
 }
 
+.hero {
+  font-size: 1rem;
+  margin-top: 8rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    margin-top: 7.5rem;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    margin-top: 8rem;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .hero {
+    margin-top: 7.6rem;
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    margin-top: 7.5rem;
+    font-size: 1rem;
+  }
+}
+.hero-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: url("../assets/hero-background.png") center center/cover;
+}
+@media screen and (max-width: 480px) {
+  .hero-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.hero-info {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding: 0 0 0 4em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 0.5em;
+}
+@media screen and (max-width: 1024) {
+  .hero-info {
+    padding: 0 0 0 3em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-info {
+    padding: 0 0 0 2em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-info {
+    padding: 2em;
+  }
+}
+.hero-tag {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.8em;
+  border-radius: 1em;
+  color: var(--white);
+  background-color: var(--black);
+}
+.hero-title {
+  font-size: 2.4em;
+  font-family: var(--type-secondary);
+  font-weight: 700;
+  color: var(--white);
+}
+@media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 2em;
+  }
+}
+.hero-description {
+  font-size: 1.1em;
+  color: var(--white);
+  line-height: 1.525em;
+}
+.hero-images {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+.hero-image {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.features-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2em 1fr 2em 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 1024px) {
+  .features-grid {
+    gap: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .features-grid {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .features-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.features-item {
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.features-item:not(:last-child) {
+  background-color: var(--white);
+}
+.features-item:last-child {
+  background-color: var(--principal);
+  color: var(--white);
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: -3;
+  grid-column-end: -1;
+}
+@media screen and (max-width: 768px) {
+  .features-item:last-child {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: -2;
+    grid-column-end: -1;
+  }
+}
+.features-item:hover {
+  -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+}
+.features-icon {
+  width: 6rem;
+  margin: 0 auto;
+}
+.features-title {
+  font-size: 1.625em;
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+.features-description {
+  line-height: 1.5rem;
+}
+
+.programs {
+  background-color: darkslateblue;
+}
+.programs-cover {
+  padding: 4rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  background-color: lightcoral;
+}
+.programs-controls {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 0.5rem;
+}
+.programs-arrow {
+  width: 4em;
+  height: 4em;
+}
+.programs-slides {
+  border-radius: 1rem;
+  background-color: var(--principal);
+  overflow: hidden;
+}
+.programs-slide {
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.programs-title {
+  font-size: 2em;
+}
+.programs-bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+.programs-bullet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+}
+.programs-svg {
+  width: 1em;
+  height: 1em;
+}
 .wrapper {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+h2, h3 {
+  font-family: var(--type-secondary);
+}
+
+.header-section {
+  padding: 4em 0;
+}
+.header-section__title {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 1024px) {
+  .header-section__title {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-section__title {
+    font-size: 2rem;
+  }
+}
+
+.features {
+  scroll-margin-top: 64px;
 }

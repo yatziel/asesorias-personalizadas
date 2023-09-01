@@ -83,8 +83,8 @@ li {
 }
 
 /* (Opcional) Configuramos anclas suaves */
-html {
-	/* scroll-behavior: smooth; */
+html { 
+	scroll-behavior: smooth;
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
@@ -153,7 +153,7 @@ td {
 svg {
 	width: 100%;
 	display: block;
-	fill: currentColor;
+	//fill: currentColor;
 }
 
 /* Configuramos la tipografía para toda la web */
@@ -164,7 +164,7 @@ body {
 	color: var(--black);
 	background-color: var(--white);
 	/* (Opcional) */
-	hyphens: auto;
+	hyphens: none;
 	/* (Opcional) */
 	font-smooth: always;
 	/* (Opcional) */

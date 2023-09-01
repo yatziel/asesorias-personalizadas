@@ -1,9 +1,33 @@
 @import 'partials/reset' , 'partials/mixins';
 
 @import 'components/header';
+@import 'components/hero';
+@import 'components/features';
+@import 'components/programs';
 
 .wrapper {
 	width: 90%;
 	max-width: 1600px;
 	margin: 0 auto;
+}
+
+h2,h3 {
+	font-family: var(--type-secondary);
+}
+
+.header-section {
+	padding: 4em 0;
+	&__title {
+		margin: 0 auto;
+		max-width: 500px;
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 700;
+		@include media (1024px) { font-size: 2.4rem;}
+		@include media (768px) { font-size: 2rem;}
+	}
+}
+
+.features {
+	scroll-margin-top: 64px;
 }
