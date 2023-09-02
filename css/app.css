@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@700&family=Inter:wght@400,600;800&display=swap"); /* Definimos las Custom properties */
+/* Definimos las Custom properties */
 :root {
   /* Colores */
   --principal: #490617;
@@ -879,7 +879,7 @@ body {
   margin: 0 auto;
   border-radius: 1rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .about-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -966,6 +966,117 @@ body {
   line-height: 1.4em;
 }
 
+.testimonials-slides {
+  margin-bottom: 4rem;
+}
+.testimonials-slide {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 6rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.testimonials-slide:hover {
+  -webkit-box-shadow: 0 0 2em rgba(133, 106, 106, 0.12);
+          box-shadow: 0 0 2em rgba(133, 106, 106, 0.12);
+}
+@media screen and (max-width: 768px) {
+  .testimonials-slide {
+    padding: 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .testimonials-slide {
+    padding: 2rem;
+  }
+}
+.testimonials-image {
+  max-width: 8rem;
+}
+.testimonials-name {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.testimonials-rol {
+  color: var(--gray);
+  font-size: 0.9em;
+}
+.testimonials-paragraph {
+  max-width: 560px;
+  line-height: 1.5rem;
+}
+
+.faqs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.faqs-item {
+  border-radius: 1rem;
+  max-width: 1120px;
+  color: var(--white);
+  background-color: var(--principal);
+}
+.faqs-question {
+  height: 60px;
+  padding: 1rem;
+  border-bottom: 1px solid var(--ligth-gray);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.faqs-title {
+  display: block;
+  width: 100%;
+}
+.faqs-icon {
+  width: auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.faqs-answer {
+  padding: 1rem;
+}
+
 .wrapper {
   width: 90%;
   max-width: 1600px;
@@ -979,7 +1090,7 @@ h2, h3 {
 .header-section {
   padding: 4em 0;
 }
-.header-section__title {
+.header-section-title {
   margin: 0 auto;
   max-width: 500px;
   text-align: center;
@@ -987,12 +1098,12 @@ h2, h3 {
   font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
-  .header-section__title {
+  .header-section-title {
     font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .header-section__title {
+  .header-section-title {
     font-size: 2rem;
   }
 }

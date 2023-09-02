@@ -1,0 +1,31 @@
+.faqs {
+	&-container {
+		@include flex(column, nowrap, center, center);
+		gap: 1rem
+	}
+	&-item{
+		border-radius: 1rem;
+		max-width: 1120px;
+		color: var(--white);
+		background-color: var(--principal);
+	}
+	&-question {
+		height: 60px;
+		padding: 1rem;
+		border-bottom: 1px solid var(--ligth-gray);
+		@include flex(row, nowrap, space-between, center);
+	}
+	&-title {
+		display: block;
+		width: 100%;
+	}
+	&-icon {
+		width: auto;
+		display: block;
+		width: 20px;
+		height: 20px;
+	}
+	&-answer {
+		padding: 1rem;
+	}
+}

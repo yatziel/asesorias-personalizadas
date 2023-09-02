@@ -5,58 +5,66 @@
 		margin: 0 auto;
 		border-radius: 1rem;
 
-		@include media(480px) {
-		@include flex(column, nowrap, center, center);
-			
+		@include media(768px) {
+			@include flex(column, nowrap, center, center);
 		}
 	}
+
 	&-image {
 		flex: 1;
 		@include media(480px) {
-				padding: 0 2rem;
-			
-			}
+			padding: 0 2rem;
+		}
 	}
+
 	&-img {
 		margin: 0 auto;
 		max-width: 340px;
 	}
+
 	&-info {
 		flex: 1;
 		padding: 2rem;
 
-				@include media(480px) {
-						padding: 0 1rem;
-				
-					}
+		@include media(480px) {
+			padding: 0 1rem;
+		}
 	}
+
 	&-title {
 		font-size: 2em;
 		font-weight: 600;
 		margin: .5em 0;
 	}
+
 	&-paragraphs {
 		line-height: 1.4rem;
 		margin-bottom: 1em;
 	}
+
 	&-bullets {
 		padding: 0 1em;
+
 		@include media(768px) {
-				padding: 0;
+			padding: 0;
 		}
 	}
+
 	&-bullet {
 		margin-bottom: 1rem;
 
 		@include flex(row, nowrap, start, top);
 		gap: 1rem;
 	}
+
 	&-icon {
 		width: 46px;
 	}
+
 	&-svg {
 		stroke: var(--principal);
 	}
+
 	&-text {
 		font-size: .954em;
 		line-height: 1.4em;
