@@ -11,19 +11,24 @@
 
 <body>
 	<header class="header">
-		<div class="wrapper">
+
 			<div class="header-content">
-				<div class="header-brand">
-					<h1 class="header-title">Asesorias<br />Personalizadas</h1>
-					<h2 class="header-tagline">Professional Growth</h2>
-				</div>
+				<a href="#" class="header-brand">
+					<div class="header-symbol">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 58 56"><path d="M57.9 40.6a5.3 5.3 0 0 1-5.2 4.3H34.1c-.4 0-.5 0-.3.4l4.6 7.2c.2.2.4.3.7.3h3.6a1.2 1.2 0 0 1 0 2.3H15.2a1.2 1.2 0 0 1 0-2.3c1-.2 3.9.4 4.4-.5 1.4-2.4 3.3-4.9 4.6-7.3-6-.3-12.2 0-18.3-.1-3.3 0-4.8-1.1-5.9-4.3V9.1C.5 6.8 2.6 5 5 5h28c.8 0 1.3.5 1.3 1.2s-.5 1.2-1.4 1.2c-9.5.2-19.2-.4-28.7.2-1.2.4-1.8 1.4-1.9 2.7.2 10.1-.4 20.4.2 30.5.5 1.2 1.5 1.7 2.7 1.8h47c1.5 0 2.6-.4 3.1-1.8.7-6 0-12.2.3-18.3-.1-1.5 1.6-1.8 2.3-.7v19ZM35.7 52.7c-1.5-2.6-3.2-5-4.8-7.6-.6-.6-2.3 0-3.2-.3-.4 0-.6.2-.8.5-1.5 2.5-3.4 4.9-4.7 7.4h13.5ZM58 16.4c-.6 1.7-2 2.9-3.8 2.8h-6.4c-.4 0-.7.1-1 .4L43 23.2c-.8.7-2.1.2-2-1V20c0-.5-.2-.7-.8-.7-1.7 0-3-.7-3.7-2.2-.8-3.9 0-8-.3-12 0-2.6 2-4 4-4 18.3 1 18-4.8 17.6 15.4Zm-14.5 2.8.2.1c1-.9 1.9-2.5 3.4-2.5h7c1 0 1.7-.8 1.6-1.7V5.3c0-1.4-.4-1.9-1.9-1.9H43c-1.4.2-4.3-.7-4.3 1.5v10.5c.3 3.3 5.4-.8 4.7 3.8ZM28.8 36.7h-7.1c-.8 0-1.8-.2-1.8-1.1-.4-4.2.4-8.8 4.4-10.9.4-.2.5-.3.1-.7-3.8-3.3-1.7-10 3.3-10.8 6-1.3 10 6.8 5.5 10.8-.3.3-.3.4 0 .7 4 2.1 4.9 6.2 4.6 10.4 0 1.1-.4 1.6-1.6 1.6h-7.4Zm0-2.4h6c.4 0 .6-.1.6-.6l-.1-2.4c-1.9-8.5-14-6.3-13 2.3 0 .5.1.7.7.7h5.8Zm-4-14.8c0 5.2 8 5.2 8 0s-7.9-5.3-8 0Z"/>
+					</div>
+					<div class="header-logo">
+						<h1 class="header-title">Asesorias<br />Personalizadas</h1>
+						<h2 class="header-tagline">Professional Growth</h2>
+					</div>
+				</a>
 				<nav class="header-nav" id="menuMobile">
 					<ul class="header-ul">
 						<li class="header-li">
 							<a class="header-a" href="#features" title="Características">Características</a>
 						</li>
 						<li class="header-li">
-							<a class="header-a" href="#programs" title="Programas">Programas</a>
+							<a class="header-a" href="#advisories" title="Asesorias">Asesorías</a>
 						</li>
 						<li class="header-li">
 							<a class="header-a" href="#about" title="Coca Sevilla">Coca Sevilla</a>
@@ -57,22 +62,25 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		
 	</header>
-
+<!-- 
 	<main class="main">
 
 		<section class="hero">
 			<div class="wrapper">
 				<div class="hero-content">
 					<div class="hero-info">
-						<span class="hero-tag">Programa Online</span>
+						<span class="hero-tag">Asesorías Online</span>
 						<div class="hero-titles">
 							<h2 class="hero-title">Presentaciones de Alto Impacto: El Arte de Hablar en Público</h2>
 						</div>
 						<p class="hero-description">Ayudamos a alcanzar el máximo potencial de las personas con las
 							mejores herramientas y técnicas de desarrollo profesional en
 							cualquier parte del mundo.</p>
+						<a class="hero-link" href="#advisories">
+							Conoce más
+						</a>
 					</div>
 					<div class="hero-images">
 						<img class="hero-image" src="./assets/hero-woman.png" alt="Fotografía de Mujer" loading="lazy" />
@@ -177,41 +185,97 @@
 			</div>
 		</section>
 
-		<section class="programs" id="programs">
+		<section class="advisories" id="advisories">
+
 			<div class="wrapper">
-				
-				<div class="programs-cover">
-					<header class="header-section">
-						<h3 class="header-section__title">El Impulso que Necesitas para Alcanzar Tus Objetivos</h3>
-						<div class="programs-controls">
-							<svg class="programs-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 8 12 12 16"/><line x1="16" y1="12" x2="8" y2="12"/></svg>
-							<svg class="programs-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-						</div>
-					</header>
-					<div class="programs-slides">
-						<div class="programs-slide">
-							<img src="/assets/programs/woman/cover.png" alt="" class="programs-image">
-							<div class="programs-info">
-								<h4 class="programs-title">Presentaciones de Alto Impacto: El Arte de Hablar en Público</h4>
-								<p class="programs-description">Adquirir herramientas para hablar en público de una manera segura, poderosa y convincente.</p>
-								<div class="programs-bullets">
-									<div class="programs-bullet">
-										<svg class="programs-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-										<p class="programs-text">Online</p>
+
+				<header class="header-section">
+					<h3 class="header-section__title">El Impulso que Necesitas para Alcanzar Tus Objetivos</h3>
+					<div class="advisories-controls">
+						<button class="advisories-button inactive">
+							<svg class="advisories-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<circle cx="12" cy="12" r="10" />
+								<polyline points="12 8 8 12 12 16" />
+								<line x1="16" y1="12" x2="8" y2="12" />
+							</svg>
+						</button>
+						<button class="advisories-button active">
+							<svg class="advisories-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<circle cx="12" cy="12" r="10" />
+								<polyline points="12 16 16 12 12 8" />
+								<line x1="8" y1="12" x2="16" y2="12" />
+							</svg>
+						</button>
+					</div>
+				</header>
+
+
+
+				<div class="advisories-programs">
+
+					<div class="advisories-program">
+
+						<div class="advisories-program-covers">
+							<img class="advisories-program-image" src="assets/programs/woman/cover.png" alt="">
+							<div class="advisories-program-info">
+								<h4 class="advisories-program-title">Presentaciones de Alto Impacto: El Arte de Hablar en Público</h4>
+								<p class="advisories-program-description">Adquirir herramientas para hablar en público de una manera
+									segura, poderosa y convincente.</p>
+								<div class="advisories-program-bullets">
+									<div class="advisories-program-bullet">
+										<svg class="advisories-program-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round">
+											<polygon points="23 7 16 12 23 17 23 7" />
+											<rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+										</svg>
+										<p class="advisories-program-text">Online</p>
 									</div>
-									<div class="programs-bullet">
-										<svg class="programs-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-										<p class="programs-text">10 hrs</p>
+									<div class="advisories-program-bullet">
+										<svg class="advisories-program-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round">
+											<circle cx="12" cy="12" r="10" />
+											<polyline points="12 6 12 12 16 14" />
+										</svg>
+										<p class="advisories-program-text">10 hrs</p>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
+						<div class="advisories-program-modules">
+							<div class="advisories-program-module">
+								<img class="advisories-program-module-image" src="assets/programs/woman/module-1.png" alt="">
+								<h5 class="advisories-program-module-title">Medidas y Proporciones Corporales</h5>
+								<p class="advisories-program-module-description">Se determina el guardarropa más favorecedor de acuerdo
+									a sus medidas y proporciones corporales.</p>
+							</div>
+							<div class="advisories-program-module">
+								<img class="advisories-program-module-image" src="assets/programs/woman/module-1.png" alt="">
+								<h5 class="advisories-program-module-title">Medidas y Proporciones Corporales</h5>
+								<p class="advisories-program-module-description">Se determina el guardarropa más favorecedor de acuerdo
+									a sus medidas y proporciones corporales.</p>
+							</div>
+							<div class="advisories-program-module">
+								<img class="advisories-program-module-image" src="assets/programs/woman/module-1.png" alt="">
+								<h5 class="advisories-program-module-title">Medidas y Proporciones Corporales</h5>
+								<p class="advisories-program-module-description">Se determina el guardarropa más favorecedor de acuerdo
+									a sus medidas y proporciones corporales.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
 			</div>
 		</section>
 	</main>
+	 -->
 </body>
 
 </html>

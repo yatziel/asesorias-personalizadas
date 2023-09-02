@@ -1,3 +1,116 @@
+.advisories {
+
+	& .header-section {
+		position: sticky;
+		top: 50px;
+		padding-bottom: 1em;
+		background-color: var(--white)
+	}
+
+	&-controls {
+		@include flex(row, nowrap, center, center);
+	}
+	&-button {
+		cursor: pointer;
+		padding: .4em;
+		&.active {
+			transform: scale(1);
+			transition: all .3s ease;
+			&:hover {
+				transform: scale(1.1); 
+			}
+		}
+		&.inactive {
+			cursor: default;
+			filter: grayscale(1);
+			opacity: .2;
+		}
+	}
+	&-arrow {
+		width: 4em;
+		height: auto;
+		stroke: var(--principal);
+	}
+
+	&-programs {
+		max-width: 1120px;
+		margin: 0 auto;
+	}
+	&-program {
+		&-covers {
+			border-radius: 1rem;
+			overflow: hidden;
+			@include flex(row, nowrap, start, center);
+			color: var(--white);
+			background-color: var(--principal);
+			margin-bottom: 1em;
+		}
+		&-image {
+			flex: 1;
+		}
+		&-info {
+			flex: 1;
+			padding: 2em;
+		}
+		&-title {
+			font-size: 2em;
+			font-family: var(--type-secondary);
+			font-weight: 700;
+			margin-bottom: .5em
+		}
+		&-description {
+			line-height: 1.5em;
+			margin-bottom: 1em;
+		}
+		&-bullets {
+			@include flex(row, nowrap, start, center);
+			gap: 1em;
+		}
+		&-bullet {
+			@include flex(row, nowrap, start, center);
+			gap: .5em;
+		}
+		&-svg {
+			width: 1em;
+			height: 1em;
+		}
+		&-text {
+			font-size: .9em;
+		}
+		
+		&-modules {
+			display: grid;
+			gap: 32px;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&-module {
+
+			border-radius: 1em;
+			overflow: hidden;
+			transition: all .6s ease;
+
+			&:hover {
+					box-shadow: 0 0 1.5em rgba(0, 0, 0, .2);
+				}
+
+			&-image {}
+			&-title {
+				padding: .7em 1em;
+				font-size: 1.3em;
+				font-weight: 600;
+			}
+			&-description {
+				padding: 0 1em 1em;
+			}
+
+		}
+	}
+	
+
+	
+}
+
+/* 
 .programs {
 	background-color: darkslateblue;
 	&-cover {
@@ -16,30 +129,40 @@
 		height: 4em;
 	}
 	&-slides {
-		border-radius: 1rem;
-		background-color: var(--principal);
-		overflow: hidden;
 	}
 	&-slide {
 		color: var(--white);
-		@include flex(row, nowrap, space-between, center)
+		@include flex(row, nowrap, space-between, center);
+		border-radius: 1rem;
+		overflow: hidden;
+		background-color: var(--principal);
 	}
-	&-image {}
+	&-image {
+		max-width: 50%;
+		height: auto;
+		object-fit:contain;
+	}
+	&-info {
+		padding: 1em;
+	}
 	&-title {
-		font-size: 2em;
+		
 	}
-	&-description {}
+	&-description {
+	
+	}
 	&-bullets {
-		@include flex(row, nowrap, start, center);
-		gap:1em;
+	
 	}
 	&-bullet {
 		@include flex(row, nowrap, start, center);
 		gap: .5em;
 	}
 	&-svg {
-		width: 1em;
-		height: 1em;
+
 	}
-	&-text {}	
+	&-text {
+
+	}	
 }
+ */

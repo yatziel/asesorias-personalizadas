@@ -1,50 +1,71 @@
 .header {
+
 	width: 100%;
 	position: fixed;
-	z-index: 20;
 	top: 0;
+	z-index: 20;
+
 	border-bottom: 1px solid var(--ligth-gray);
 	box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 	background-color: var(--white);
 
-	@include media(1024px) {
-		font-size: 0.875em;
-	}
-
-	@include media(900px) {
-		font-size: 0.8125em;
-	}
-
-	@include media(800px) {
-		font-size: 0.75em;
-	}
-
-	@include media(768px) {
-		font-size: 1em;
-	}
 
 	&-content {
-		position: relative;
-		padding: 1em 0;
+
+		font-size: 1rem;
+		padding: 1rem 2rem;
+
 		@include flex(row, nowrap, space-between, center);
+
+		@include media (1440) {
+			font-size: .923em;
+		}
+
+		@include media(1024px) {
+			font-size: 0.875em;
+		}
+
+		@include media(900px) {
+			font-size: 0.8125em;
+		}
+
+		@include media(800px) {
+			font-size: 0.75em;
+		}
+
+		@include media(768px) {
+			font-size: 1em;
+		}
 	}
 
-	&-brand {}
+	&-brand {
+		@include flex(row, nowrap, start, center);
+		gap: 1em;
+	}
+
+	&-symbol {
+		width: 5em;
+	}
+
+	&-symbol svg {
+		fill: var(--principal);
+	}
 
 	&-title {
-		font-size: 1.5em;
+		font-size: 1.7em;
 		line-height: 1em;
-		font-weight: 700;
+		font-weight: 800;
 		margin-bottom: 0.1em;
 		color: var(--principal);
 		transition: all 0.4s ease;
 	}
 
 	&-tagline {
-		font-size: 0.625em;
+		font-size: .75em;
 		font-family: var(--type-secondary);
+		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 0.3em;
+		letter-spacing: 0.25em;
 		transition: all 0.4s ease;
 	}
 
@@ -113,10 +134,12 @@
 	}
 
 	&-a {
+		font-size: 1em;
+		font-weight: 600;
+		text-align: center;
+
 		position: relative;
 		padding: 1em;
-		text-align: center;
-		font-weight: 600;
 		transition: all 0.4s ease;
 
 		&:hover {
@@ -141,16 +164,33 @@
 	&-li__side {}
 
 	&-link {
+
+		font-size: 1.2em;
+		font-weight: 600;
+
 		@include flex(row, nowrap, center, center);
 		gap: 0.5rem;
+
+		outline: .25rem solid var(--white);
 		border-radius: 1rem;
-		padding: 1em;
-		background-color: var(--principal);
+		padding: 1rem;
+
+		scale: 1.05;
+
 		color: var(--white);
-		transition: all 0.4s ease;
+		background-color: var(--principal);
+		
+		transition: all 0.2s ease;
 
 		&:hover {
+			scale: 1.1;
+			outline-color: var(--ligth-gray);
 			background-color: var(--secondary);
+		}
+
+		&:active {
+			scale: .9;
+			background-color: var(--principal);
 		}
 
 		@include media(768px) {

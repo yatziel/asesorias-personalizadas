@@ -10,3 +10,7 @@
 		@content	
 	}
 }
+
+@mixin gradient() {
+	background: linear-gradient(180deg, #D35544 0%, #7B1824 61.98%, #4D0918 100%);
+}

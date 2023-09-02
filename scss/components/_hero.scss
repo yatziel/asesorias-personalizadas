@@ -1,100 +1,75 @@
 .hero {
-	font-size: 1rem;
+	font-size: 2rem;
 	margin-top: 8rem;
 
 	transition: all 0.4s ease;
-	
-	@include media(1024px) {
-		margin-top: 7.5rem;
-		font-size: .9rem;
-	}
 
-	@include media(768px) {
-		margin-top: 8rem;
-		font-size: .8rem;
-	}
-
-	@include media(520px) {
-		margin-top: 7.6rem;
-		font-size: .7rem;
-	}
-
-	@include media(480px) {
-		margin-top: 7.5rem;
-		font-size: 1rem;
-	}
+	@include media(1440px) { font-size: 1rem; }
+	@include media(1024px) { font-size: .9rem; }
+	@include media(768px) { font-size: .8rem; }
+	@include media(520px) { font-size: .7rem; }
+	@include media(480px) { font-size: 1rem; }
 
 	&-content {
-		@include flex(row, nowrap, center, center);
+		@include flex(row, nowrap, center, stretch);
+		gap: 2em;
+		padding: 0 4em;
 		border-radius: 1rem;
 		overflow: hidden;
 		background: url('../assets/hero-background.png') center center / cover;
 
 		@include media(480px) {
 			@include flex(column, nowrap, center, center);
-		} 
+		}
 	}
 
 	&-info {
-		flex-grow: 0;
-		padding: 0 0 0 4em;
-		width: 100%;
+		flex: 1;
+		background-color: green;
 		@include flex(column, nowrap, center, start);
 		gap: .5em;
-		
-
-		@include media (1024) {
-		padding: 0 0 0 3em;
-		}
-		@include media (768px) {
-			padding: 0 0 0 2em;
-		}
-	
-		@include media (480px) {
-			padding: 2em;
-		}
 	}
 
 
 	&-tag {
-		font-size: .8em;
+		font-size: 1em;
 		text-transform: uppercase;
 		letter-spacing: .12em;
-		padding: .8em;
+		padding: .6em 1em;
 		border-radius: 1em;
 		color: var(--white);
 		background-color: var(--black);
 	}
 
-	&-titles {
-	}
-	
+	&-titles {}
+
 	&-title {
-		font-size: 2.4em;
+		font-size: 4em;
 		font-family: var(--type-secondary);
 		font-weight: 700;
 		color: var(--white);
-
-		@include media (1024px) {
-			font-size: 2em;
-		}
-
 	}
 
 	&-description {
-		font-size: 1.1em;
+		font-size: 1.3em;
 		color: var(--white);
 		line-height: 1.525em;
 	}
 
+	&-link {
+		color: var(--white);
+		padding: 1em 2em;
+		border: 2px solid var(--white);
+		border-radius: 1rem;
+	}
+
 	&-images {
-		flex-grow: 1;
-		width: 100%;
+		flex: 1;
+		background-color: blue;
 	}
 
 	&-image {
-		width: 100%;
-		object-fit:fill;
+		/* 	width: 100%;
+		object-fit:fill; */
 	}
 }
-
