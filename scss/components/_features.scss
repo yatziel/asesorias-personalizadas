@@ -1,5 +1,8 @@
 .features {
-	&-content {}
+	&-content {
+		max-width: 80%;
+		margin: 0 auto 4rem;
+	}
 	&-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -20,8 +23,8 @@
 	&-item {
 		border-radius: 1rem;
 		text-align: center;
-		padding: 2rem;
-
+		padding: 4rem 4rem;
+		
 		transition: all .6s ease;
 
 		&:not(:last-child){
@@ -30,15 +33,20 @@
 
 		&:last-child{
 			background-color: var(--principal);
+			background: var(--gradients-gradient, linear-gradient(180deg, #D35544 0%, #7B1824 61.98%, #4D0918 100%));
 			color: var(--white);
 			grid-column-start: 2;
 			grid-column-end: -1;
+			outline: .25em solid var(--white);
+			
 			@include media (768px) {
 				grid-column-start: 1;
 				grid-column-end: -1;
 			}
+			
 		}
 		&:hover {
+			
 			box-shadow: 0 0 1.5em rgba(0, 0, 0, .2);
 		}
 	}

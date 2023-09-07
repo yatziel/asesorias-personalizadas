@@ -1,8 +1,9 @@
 .about {
+
 	&-content {
 		@include flex(row, nowrap, center, center);
 		max-width: 960px;
-		margin: 0 auto;
+		margin: 8rem auto;
 		border-radius: 1rem;
 
 		@include media(768px) {

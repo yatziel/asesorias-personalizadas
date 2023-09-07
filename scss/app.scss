@@ -20,7 +20,7 @@ h2,h3 {
 }
 
 .header-section {
-	padding: 4em 0;
+	margin: 6em 0;
 	&-title {
 		margin: 0 auto;
 		max-width: 500px;
@@ -32,6 +32,9 @@ h2,h3 {
 	}
 }
 
-.features {
-	scroll-margin-top: 64px;
+.features,
+.advisories,
+.about,
+.testimonials {
+	scroll-margin-top: 120px;
 }

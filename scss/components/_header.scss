@@ -134,7 +134,7 @@
 	}
 
 	&-a {
-		font-size: 1em;
+		font-size: 1.1em;
 		font-weight: 600;
 		text-align: center;
 
@@ -179,7 +179,8 @@
 
 		color: var(--white);
 		background-color: var(--principal);
-		
+		background: var(--gradients-gradient, linear-gradient(180deg, #D35544 0%, #7B1824 61.98%, #4D0918 100%));
+
 		transition: all 0.2s ease;
 
 		&:hover {

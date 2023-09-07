@@ -1,5 +1,5 @@
 .hero {
-	font-size: 2rem;
+	font-size: 1.2rem;
 	margin-top: 8rem;
 
 	transition: all 0.4s ease;
@@ -13,7 +13,7 @@
 	&-content {
 		@include flex(row, nowrap, center, stretch);
 		gap: 2em;
-		padding: 0 4em;
+		padding: 0 6em;
 		border-radius: 1rem;
 		overflow: hidden;
 		background: url('../assets/hero-background.png') center center / cover;
@@ -25,9 +25,9 @@
 
 	&-info {
 		flex: 1;
-		background-color: green;
+		//background-color: green;
 		@include flex(column, nowrap, center, start);
-		gap: .5em;
+		gap: 1em;
 	}
 
 
@@ -38,13 +38,13 @@
 		padding: .6em 1em;
 		border-radius: 1em;
 		color: var(--white);
-		background-color: var(--black);
+		background-color: #000;
 	}
 
 	&-titles {}
 
 	&-title {
-		font-size: 4em;
+		font-size: 3.5em;
 		font-family: var(--type-secondary);
 		font-weight: 700;
 		color: var(--white);
@@ -59,13 +59,27 @@
 	&-link {
 		color: var(--white);
 		padding: 1em 2em;
-		border: 2px solid var(--white);
+		outline: 2px solid var(--ligth-gray);
 		border-radius: 1rem;
+
+		scale: 1;
+		transition: all 0.2s ease;
+
+		&:hover {
+			background-color: #000;
+			outline-color: var(--principal);
+			scale: 1.05;
+		}
+		&:active {
+			scale: .96;
+			background-color: var(--ligth-gray);
+			color: var( --black);
+		}
 	}
 
 	&-images {
 		flex: 1;
-		background-color: blue;
+		//background-color: blue;
 	}
 
 	&-image {

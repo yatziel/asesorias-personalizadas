@@ -1,34 +1,42 @@
 .faqs {
+
 	&-container {
 		@include flex(column, nowrap, center, center);
-		gap: 1rem
+	
+		background-color: var(--principal);
+		background: var(--gradients-gradient, linear-gradient(180deg, #D35544 0%, #7B1824 61.98%, #4D0918 100%));
+		max-width: 960px;
+		margin: 0 auto;
+		border-radius: 1rem;
+		overflow: hidden;
+		padding: 2em;
 	}
 
 	&-item {
-		border-radius: 1rem;
-		max-width: 1120px;
+		
+		border-bottom: 1px solid #d3a7a749;
 		width: 100%;
 		color: var(--white);
-		overflow: hidden;
+		
 	}
 
 	&-question {
 		width: 100%;
-		padding: 1rem;
+		padding: 1.4rem;
 		outline: none;
-		//border-bottom: 1px solid #d3a7a749;
+		
 		@include flex(row, nowrap, space-between, center);
 		cursor: pointer;
-		background-color: var(--principal);
+		//background-color: var(--principal);
 		transition: 0.4s;
 
-		&:hover {
+	/* 	&:hover {
 			background-color: #210404;
 		}
 
 		&__active {
 			background-color: #210404;
-		}
+		} */
 	}
 
 	&-title {
@@ -50,13 +58,13 @@
 	}
 
 	&-answer {
-		background-color: var(--principal);
+		/* background-color: var(--principal); */
 		overflow: hidden;
 		max-height: 0;
 		transition: max-height 0.2s ease-out;
 
 		& p {
-			padding: 1rem;
+			padding: 1.4rem;
 		}
 	}
 

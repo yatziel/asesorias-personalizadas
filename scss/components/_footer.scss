@@ -1,4 +1,6 @@
 .footer {
+	margin-top: 4em;
+	padding: 0 2em;
 	&-brands {
 		@include flex(row, nowrap, space-between, center);
 	
