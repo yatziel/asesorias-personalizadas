@@ -1,0 +1,43 @@
+.footer {
+	&-brands {
+		@include flex(row, nowrap, space-between, center);
+	
+
+		@include media(768px) {
+			@include flex(column, nowrap, center, center);
+		}
+	}
+
+	&-logo {
+		max-height: 40px;
+		width: auto;
+		margin-bottom: 1em;
+	}
+	
+
+	&-legals {
+		@include flex(row, nowrap, space-between, center);
+		@include media(768px) {
+				@include flex(column, nowrap, center, center);
+			}
+	}
+
+	&-list {
+		@include flex(row, nowrap, start, center);
+		gap: 1rem;
+		@include media(768px) {
+				@include flex(column, nowrap, center, center);
+				gap: 0rem;
+			}
+	}
+
+	&-bullet a {
+		text-decoration: underline;
+		margin-bottom: 1em;
+		&:hover {
+			color: var(--principal);
+		}
+	}
+
+	
+}

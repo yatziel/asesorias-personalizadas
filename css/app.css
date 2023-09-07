@@ -1042,13 +1042,77 @@ body {
 .faqs-item {
   border-radius: 1rem;
   max-width: 1120px;
+  width: 100%;
   color: var(--white);
-  background-color: var(--principal);
+  overflow: hidden;
 }
 .faqs-question {
-  height: 60px;
+  width: 100%;
   padding: 1rem;
-  border-bottom: 1px solid var(--ligth-gray);
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  background-color: var(--principal);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.faqs-question:hover {
+  background-color: #210404;
+}
+.faqs-question__active {
+  background-color: #210404;
+}
+.faqs-title {
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+.faqs-icon {
+  width: auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.faqs-icon__active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.faqs-answer {
+  background-color: var(--principal);
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+.faqs-answer p {
+  padding: 1rem;
+}
+.faqs-text {
+  line-height: 1.5em;
+}
+.faqs-list {
+  padding: 0 0 1em 3em;
+  line-height: 1.6em;
+}
+.faqs-bullet {
+  list-style: disc;
+}
+
+.footer-brands {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1063,18 +1127,100 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.faqs-title {
-  display: block;
-  width: 100%;
+@media screen and (max-width: 768px) {
+  .footer-brands {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
-.faqs-icon {
+.footer-logo {
+  max-height: 40px;
   width: auto;
-  display: block;
-  width: 20px;
-  height: 20px;
+  margin-bottom: 1em;
 }
-.faqs-answer {
-  padding: 1rem;
+.footer-legals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .footer-legals {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0rem;
+  }
+}
+.footer-bullet a {
+  text-decoration: underline;
+  margin-bottom: 1em;
+}
+.footer-bullet a:hover {
+  color: var(--principal);
 }
 
 .wrapper {

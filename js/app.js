@@ -1,5 +1,21 @@
 'use strict';
-var menuButton = document.getElementById('menuButton');
-var menuMobile = document.getElementById('menuMobile');
-menuButton.addEventListener('click', function () { menuMobile.classList.toggle('menu-show'); });
-document.querySelectorAll('.header-a').forEach(function (n) { return n.addEventListener('click', function () { menuMobile === null || menuMobile === void 0 ? void 0 : menuMobile.classList.remove('menu-show'); }); });
+
+/* const menuButton = document.getElementById('menuButton');
+const menuMobile = document.getElementById('menuMobile');
+
+menuButton.addEventListener('click', () => { menuMobile.classList.toggle('menu-show') });
+
+document.querySelectorAll('.header-a').forEach( (n) => n.addEventListener('click', () => { menuMobile?.classList.remove('menu-show') }) ); */
+var acc = document.getElementsByClassName('faqs-question');
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener('click', function () {
+    this.classList.toggle('faqs-question__active');
+    this.lastElementChild.classList.toggle('faqs-icon__active');
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+}

@@ -3,29 +3,71 @@
 		@include flex(column, nowrap, center, center);
 		gap: 1rem
 	}
-	&-item{
+
+	&-item {
 		border-radius: 1rem;
 		max-width: 1120px;
+		width: 100%;
 		color: var(--white);
-		background-color: var(--principal);
+		overflow: hidden;
 	}
+
 	&-question {
-		height: 60px;
+		width: 100%;
 		padding: 1rem;
-		border-bottom: 1px solid var(--ligth-gray);
+		outline: none;
+		//border-bottom: 1px solid #d3a7a749;
 		@include flex(row, nowrap, space-between, center);
+		cursor: pointer;
+		background-color: var(--principal);
+		transition: 0.4s;
+
+		&:hover {
+			background-color: #210404;
+		}
+
+		&__active {
+			background-color: #210404;
+		}
 	}
+
 	&-title {
+		text-align: left;
 		display: block;
 		width: 100%;
 	}
+
 	&-icon {
 		width: auto;
 		display: block;
 		width: 20px;
 		height: 20px;
+		transition: 0.4s;
+
+		&__active {
+			transform: rotate(90deg);
+		}
 	}
+
 	&-answer {
-		padding: 1rem;
+		background-color: var(--principal);
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.2s ease-out;
+
+		& p {
+			padding: 1rem;
+		}
+	}
+
+	&-text {
+		line-height: 1.5em;
+	}
+	&-list {
+		padding: 0 0 1em 3em;
+		line-height: 1.6em;
+	}
+	&-bullet {
+		list-style: disc;
 	}
 }
