@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
 /* Definimos las Custom properties */
 :root {
 	/* Colores */
-	--principal: #490617;
+	--primary: #490617;
 	--secondary: #0c0404;
 	--black: #2d2d2d;
 	--gray: #9b9b9b;
 	--ligth-gray: #ede4e5;
 	--white: #fafafa;
 
+	--gradient-primary: linear-gradient(180deg, #d34444 0%, #7b1824 61.98%, #4d0918 100%);
+	--gradient-secondary: linear-gradient(180deg, #521818 0%, #41050c 61.98%, #310c14 100%);
+
 	/* Tipografía */
-	--type-princpial: 'Inter', sans-serif;
-	--type-secondary: 'Crimson Pro', serif;
+	--type-primary: 'Inter', sans-serif;
+	//--type-secondary: 'Crimson Pro', serif;
 }
 
 /* (Opcional) Las adaptamos al modo oscuro */
@@ -121,7 +126,7 @@ q:after {
 
 /* (Opcional) Configuramos el texto que seleccionamos */
 ::selection {
-	background-color: var(--principal);
+	background-color: var(--primary);
 	color: var(--white);
 }
 
@@ -160,7 +165,7 @@ svg {
 body {
 	min-height: 100vh;
 	font-size: 100%;
-	font-family: var(--type-princpial);
+	font-family: var(--type-primary);
 	color: var(--black);
 	background-color: var(--white);
 	/* (Opcional) */

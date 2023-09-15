@@ -5,12 +5,8 @@
 	align-items: $aling;
 }
 
-@mixin media ($value : 700px) {
+@mixin media($value : 700px) {
 	@media screen and (max-width : $value) {
-		@content	
+		@content
 	}
-}
-
-@mixin gradient() {
-	background: linear-gradient(180deg, #D35544 0%, #7B1824 61.98%, #4D0918 100%);
 }

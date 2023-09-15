@@ -1,64 +1,77 @@
 .hero {
-	font-size: 1.2rem;
-	margin-top: 8rem;
-
+	position: relative;
+	padding: 1rem;
 	transition: all 0.4s ease;
 
-	@include media(1440px) { font-size: 1rem; }
-	@include media(1024px) { font-size: .9rem; }
-	@include media(768px) { font-size: .8rem; }
-	@include media(520px) { font-size: .7rem; }
-	@include media(480px) { font-size: 1rem; }
 
 	&-content {
+		position: relative;
 		@include flex(row, nowrap, center, stretch);
 		gap: 2em;
-		padding: 0 6em;
 		border-radius: 1rem;
 		overflow: hidden;
 		background: url('../assets/hero-background.png') center center / cover;
+		height: 640px;
 
-		@include media(480px) {
-			@include flex(column, nowrap, center, center);
+		@include media(768px) {
+				display: block;
 		}
 	}
 
 	&-info {
 		flex: 1;
-		//background-color: green;
 		@include flex(column, nowrap, center, start);
-		gap: 1em;
+		gap: 1.5rem;
+		
+		@include media(768px) {
+			position: absolute;
+		}
 	}
 
 
 	&-tag {
-		font-size: 1em;
+		font-size: .9em;
 		text-transform: uppercase;
-		letter-spacing: .12em;
-		padding: .6em 1em;
-		border-radius: 1em;
+		letter-spacing: .3em;
+		padding: .6rem 1rem;
+		border-radius: 1rem;
 		color: var(--white);
 		background-color: #000;
 	}
 
-	&-titles {}
+	&-titles {
+		position: relative;
+		width: 100%;
+		height: 192px;
+	}
+
 
 	&-title {
+		position: absolute;
+		width: 100%;
 		font-size: 3.5em;
 		font-family: var(--type-secondary);
-		font-weight: 700;
+		font-weight: 800;
 		color: var(--white);
+		opacity: 0;
+		transition: opacity 1s ease;
+	}
+
+	&-title.active {
+		opacity: 1;
 	}
 
 	&-description {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		color: var(--white);
-		line-height: 1.525em;
+		line-height: 1.6em;
 	}
 
 	&-link {
+		font-size: 1.1em;
+		font-weight: 600;
 		color: var(--white);
-		padding: 1em 2em;
+		padding: 1rem 2rem;
 		outline: 2px solid var(--ligth-gray);
 		border-radius: 1rem;
 
@@ -68,22 +81,35 @@
 		&:hover {
 			background-color: #000;
 			outline-color: var(--principal);
-			scale: 1.05;
+			outline: 2px solid var(--black);
 		}
 		&:active {
-			scale: .96;
-			background-color: var(--ligth-gray);
-			color: var( --black);
+			scale: .95;
+
 		}
 	}
 
 	&-images {
+		position: relative;
 		flex: 1;
-		//background-color: blue;
+			@include media(768px) {
+					display: block;
+				}
 	}
 
 	&-image {
-		/* 	width: 100%;
-		object-fit:fill; */
+		position: absolute;
+		height: 100%;
+		object-fit:contain;
+		object-position: center bottom;
+		opacity: 0;
+		transition: opacity 1s ease;
+		@include media(768px) {
+			background-color: red;
+		}
+	}
+
+	&-image.active {
+		opacity: 1;
 	}
 }

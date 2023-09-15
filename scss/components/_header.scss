@@ -1,41 +1,26 @@
 .header {
-
 	width: 100%;
 	position: fixed;
 	top: 0;
-	z-index: 20;
+	z-index: 1000;
 
 	border-bottom: 1px solid var(--ligth-gray);
-	box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 	background-color: var(--white);
-
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 
 	&-content {
-
-		font-size: 1rem;
-		padding: 1rem 2rem;
-
+		padding: 1em 2em;
 		@include flex(row, nowrap, space-between, center);
 
-		@include media (1440) {
-			font-size: .923em;
-		}
-
-		@include media(1024px) {
-			font-size: 0.875em;
-		}
-
-		@include media(900px) {
-			font-size: 0.8125em;
-		}
-
-		@include media(800px) {
-			font-size: 0.75em;
-		}
-
-		@include media(768px) {
-			font-size: 1em;
-		}
+		@include media(1920px) 	{font-size: 1.2rem;	}		
+		@include media(1440px) 	{font-size: 1rem;		}
+		@include media(1024px) 	{font-size: 0.875em;}
+		@include media(900px) 	{font-size: 0.756em;}		
+		@include media(800px) 	{font-size: 0.7em;	}
+		@include media(768px) 	{font-size: 1em;		} 
+		@include media(425px) 	{font-size: .875em;	}
+		@include media(375px) 	{font-size: .756em;	}
+		@include media(320px) 	{font-size: .7em;		}
 	}
 
 	&-brand {
@@ -44,11 +29,11 @@
 	}
 
 	&-symbol {
-		width: 5em;
+		width: 4.6em;
 	}
 
 	&-symbol svg {
-		fill: var(--principal);
+		fill: var(--primary);
 	}
 
 	&-title {
@@ -56,18 +41,20 @@
 		line-height: 1em;
 		font-weight: 800;
 		margin-bottom: 0.1em;
-		color: var(--principal);
+		color: var(--primary);
+
 		transition: all 0.4s ease;
+
 	}
 
 	&-tagline {
-		font-size: .75em;
-		font-family: var(--type-secondary);
-		font-weight: 700;
+		font-size: 0.75em;
+		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.25em;
+
 		transition: all 0.4s ease;
-	}
+}
 
 	&-nav {
 		position: relative;
@@ -75,12 +62,13 @@
 		@include media(768px) {
 			display: none;
 			position: absolute;
+			width: 92%;
 			left: 0;
 			right: 0;
 			top: 100%;
 			margin: 1em auto;
 			border-radius: 1rem;
-			background-color: var(--principal);
+			background: var(--gradient-primary);
 
 			&.menu-show {
 				display: block;
@@ -90,7 +78,7 @@
 
 	&-ul {
 		@include flex(row, nowrap, center, center);
-		gap: 0.5rem;
+		gap: 0.5em;
 
 		@include media(768px) {
 			@include flex(column, nowrap, center, center);
@@ -104,12 +92,12 @@
 		&::after {
 			content: '';
 			position: absolute;
-			left: 0;
-			bottom: 4px;
 			width: 100%;
 			height: 3px;
+			left: 0;
+			bottom: 4px;
 			border-radius: 4px;
-			background-color: var(--principal);
+			background-color: var(--primary);
 			transform: scaleX(0);
 			transform-origin: center;
 			transition: transform 0.2s ease;
@@ -134,7 +122,7 @@
 	}
 
 	&-a {
-		font-size: 1.1em;
+		font-size: 1em;
 		font-weight: 600;
 		text-align: center;
 
@@ -143,17 +131,13 @@
 		transition: all 0.4s ease;
 
 		&:hover {
-			color: var(--principal);
+			color: var(--primary);
 		}
 
 		@include media(768px) {
-			font-size: 1.2em;
+			font-size: 1em;
 			padding: 1.6em 0;
 			color: var(--white);
-
-			&:hover {
-				color: var(--white);
-			}
 		}
 	}
 
@@ -161,37 +145,35 @@
 		@include flex(row, nowrap, end, center);
 	}
 
-	&-li__side {}
+	&-li__side {
+	}
 
 	&-link {
-
-		font-size: 1.2em;
+		font-size: 1em;
 		font-weight: 600;
 
 		@include flex(row, nowrap, center, center);
-		gap: 0.5rem;
+		gap: 0.5em;
 
-		outline: .25rem solid var(--white);
+		outline: 0.25rem solid var(--white);
 		border-radius: 1rem;
 		padding: 1rem;
 
-		scale: 1.05;
+		scale: 1;
 
 		color: var(--white);
-		background-color: var(--principal);
-		background: var(--gradients-gradient, linear-gradient(180deg, #D35544 0%, #7B1824 61.98%, #4D0918 100%));
+		background: var(--gradient-primary);
 
 		transition: all 0.2s ease;
 
 		&:hover {
-			scale: 1.1;
 			outline-color: var(--ligth-gray);
-			background-color: var(--secondary);
+			background: var(--gradient-secondary);
 		}
 
 		&:active {
-			scale: .9;
-			background-color: var(--principal);
+			scale: .95;
+			background-color: var(--primary);
 		}
 
 		@include media(768px) {
@@ -211,7 +193,7 @@
 			display: block;
 			border-radius: 1rem;
 			padding: 1em;
-			background-color: var(--principal);
+			background: var(--gradient-primary);
 			color: var(--white);
 		}
 	}
