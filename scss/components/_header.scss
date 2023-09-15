@@ -14,13 +14,13 @@
 
 		@include media(1920px) 	{font-size: 1.2rem;	}		
 		@include media(1440px) 	{font-size: 1rem;		}
-		@include media(1024px) 	{font-size: 0.875em;}
-		@include media(900px) 	{font-size: 0.756em;}		
-		@include media(800px) 	{font-size: 0.7em;	}
-		@include media(768px) 	{font-size: 1em;		} 
-		@include media(425px) 	{font-size: .875em;	}
-		@include media(375px) 	{font-size: .756em;	}
-		@include media(320px) 	{font-size: .7em;		}
+		@include media(1024px) 	{font-size: 0.875rem;}
+		@include media(900px) 	{font-size: 0.756rem;}		
+		@include media(800px) 	{font-size: 0.7rem;	}
+		@include media(768px) 	{font-size: 1rem;		} 
+		@include media(425px) 	{font-size: .875rem;	}
+		@include media(375px) 	{font-size: .756rem;	}
+		@include media(320px) 	{font-size: .7rem;		}
 	}
 
 	&-brand {
