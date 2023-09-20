@@ -22,3 +22,24 @@ for (let i = 0; i < acc.length; i++) {
 		}
 	});
 }
+
+const heroTitles = document.querySelectorAll('.hero-title');
+const heroImages = document.querySelectorAll('.hero-image');
+
+
+
+setInterval(function () {
+	heroTitles[i].classList.remove('active');
+	heroImages[i].classList.remove('active');
+	i++;
+
+	if (i >= heroTitles.length) {
+		i = 0;
+	}
+	if (i >= heroImages.length) {
+		i = 0;
+	}
+
+	heroTitles[i].classList.add('active');
+	heroImages[i].classList.add('active');
+}, 3000);
