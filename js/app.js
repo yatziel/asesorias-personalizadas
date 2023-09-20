@@ -18,6 +18,7 @@ for (var _i = 0; _i < acc.length; _i++) {
       panel.style.maxHeight = panel.scrollHeight + 'px';
     }
   });
+<<<<<<< HEAD
 }
 var heroTitles = document.querySelectorAll('.hero-title');
 var heroImages = document.querySelectorAll('.hero-image');
@@ -34,3 +35,6 @@ setInterval(function () {
   heroTitles[i].classList.add('active');
   heroImages[i].classList.add('active');
 }, 3000);
+=======
+}
+>>>>>>> dc25fb369eb30e85e6d20d4de9eeec6c47a878a7
