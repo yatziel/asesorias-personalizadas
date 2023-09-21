@@ -1,29 +1,19 @@
 .features {
-	&-content {
-		max-width: 80%;
-		margin: 0 auto 4rem;
-	}
+	&-content {}
 	&-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 2em;
+		gap: 1rem;
 
-		transition: all .5s ease;
-		@include media (1024px) {
-			gap: 1em;
-		}
-
-		@include media (768px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@include media (480px) {
-			grid-template-columns: 1fr;
-		}
+		@include media (1024px) {grid-template-columns: repeat(2, 1fr);}
+		@include media (480px) {grid-template-columns: 1fr;}
 	}
 	&-item {
-		border-radius: 1rem;
+		padding: 4rem;
+
 		text-align: center;
-		padding: 4rem 4rem;
+
+		border-radius: 1rem;
 		
 		transition: all .6s ease;
 
@@ -32,22 +22,25 @@
 		}
 
 		&:last-child{
-			background-color: var(--principal);
-			background: var(--gradients-gradient, linear-gradient(180deg, #D35544 0%, #7B1824 61.98%, #4D0918 100%));
-			color: var(--white);
 			grid-column-start: 2;
 			grid-column-end: -1;
-			outline: .25em solid var(--white);
+
+			background: var(--gradient-primary);
+			color: var(--white);
+			outline: .25rem solid var(--white);
 			
-			@include media (768px) {
+			@include media (1024px) {
 				grid-column-start: 1;
 				grid-column-end: -1;
 			}
 			
 		}
 		&:hover {
-			
 			box-shadow: 0 0 1.5em rgba(0, 0, 0, .2);
+		}
+
+		@include media (768px) {
+			padding: 2rem;
 		}
 	}
 	&-icon {
@@ -55,9 +48,9 @@
 		margin: 0 auto;
 	}
 	&-title {
-		font-size: 1.625em;
+		font-size: 1.4rem;
 		font-weight: 600;
-		margin: .5em 0;
+		margin: .5rem 0;
 	}
 	&-description {
 		line-height: 1.5rem;

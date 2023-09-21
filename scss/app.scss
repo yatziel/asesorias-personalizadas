@@ -13,30 +13,36 @@
 
 
 .wrapper {
-	width: 100%;
-	max-width: 1600px;
-	margin: 0 auto;
+	width: 90%;
+	max-width: 1440px;
+	margin: auto;
+
+	@include media(1024px) {
+		width: 96%;
+	}
 }
 
 
 .header-section {
-	margin: 6em 0;
+	margin: 4em 0;
+	
 	&-title {
+		max-width: 640px;
 		margin: 0 auto;
-		max-width: 500px;
+
 		text-align: center;
-		font-size: 3rem;
+		font-size: 2.2rem;
 		font-weight: 700;
-		@include media (1024px) { font-size: 2.4rem;}
-		@include media (768px) { font-size: 2rem;}
+
+		@include media(480px) {font-size: 1.8rem;}
 	}
 }
 
 .features,
-.advisories,
+
 .about,
 .testimonials {
-	scroll-margin-top: 120px;
+	scroll-margin-top: 8rem;
 }
 
 .main {

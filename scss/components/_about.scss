@@ -1,10 +1,10 @@
 .about {
 
 	&-content {
-		@include flex(row, nowrap, center, center);
 		max-width: 960px;
-		margin: 8rem auto;
-		border-radius: 1rem;
+		margin: 0 auto;
+		
+		@include flex(row, nowrap, center, center);
 
 		@include media(768px) {
 			@include flex(column, nowrap, center, center);
@@ -13,38 +13,38 @@
 
 	&-image {
 		flex: 1;
-		@include media(480px) {
-			padding: 0 2rem;
-		}
 	}
 
 	&-img {
+		
 		margin: 0 auto;
-		max-width: 340px;
+		max-width: 400px;
 	}
 
 	&-info {
-		flex: 1;
-		padding: 2rem;
 
-		@include media(480px) {
-			padding: 0 1rem;
+		flex: 1;
+
+		
+		@include media(768px) {
+			padding: 1rem;
 		}
 	}
 
 	&-title {
-		font-size: 2em;
-		font-weight: 600;
-		margin: .5em 0;
+		font-size: 2.2rem;
+		font-weight: 800;
+		margin-bottom: .5rem;
 	}
 
 	&-paragraphs {
+		font-size: 1rem;
 		line-height: 1.4rem;
-		margin-bottom: 1em;
+		margin-bottom: 2rem;
 	}
 
 	&-bullets {
-		padding: 0 1em;
+		padding: 0 1rem;
 
 		@include media(768px) {
 			padding: 0;
@@ -63,11 +63,11 @@
 	}
 
 	&-svg {
-		stroke: var(--principal);
+		stroke: var(--primary);
 	}
 
 	&-text {
-		font-size: .954em;
-		line-height: 1.4em;
+		font-size: .9rem;
+		line-height: 1.2rem;
 	}
 }

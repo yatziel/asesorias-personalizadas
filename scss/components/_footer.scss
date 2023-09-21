@@ -1,25 +1,41 @@
 .footer {
-	margin-top: 4em;
-	padding: 0 2em;
-	&-brands {
-		@include flex(row, nowrap, space-between, center);
-	
 
-		@include media(768px) {
+	&-brands {
+		@include flex(row, nowrap, center, center);
+		gap: 3rem;
+		
+		margin-bottom: 1rem;
+	
+		:first-child {
+			max-height: 40px;
+			width: auto;
+
+		}
+		:last-child  {
+			max-height: 25px;
+			width: auto;
+
+		}
+
+
+		@include media(480px) {
 			@include flex(column, nowrap, center, center);
+			gap: 1rem;
+			
 		}
 	}
 
-	&-logo {
-		max-height: 40px;
-		width: auto;
-		margin-bottom: 1em;
-	}
+	&-logo {}
 	
 
 	&-legals {
-		@include flex(row, nowrap, space-between, center);
+		margin-bottom: 1rem;
+		@include flex(row, nowrap, center, center);
+
 		@include media(768px) {
+			margin-bottom: 6rem;
+		}
+		@include media(480px) {
 				@include flex(column, nowrap, center, center);
 			}
 	}
@@ -27,17 +43,16 @@
 	&-list {
 		@include flex(row, nowrap, start, center);
 		gap: 1rem;
-		@include media(768px) {
+		@include media(480px) {
 				@include flex(column, nowrap, center, center);
-				gap: 0rem;
+
 			}
 	}
 
 	&-bullet a {
 		text-decoration: underline;
-		margin-bottom: 1em;
 		&:hover {
-			color: var(--principal);
+			color: var(--primary);
 		}
 	}
 

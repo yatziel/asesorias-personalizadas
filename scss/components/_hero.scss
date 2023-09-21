@@ -1,70 +1,102 @@
 .hero {
-	position: relative;
-	padding: 1rem;
+	padding: 1rem 0;
+
+	
+	@include media(480px) {padding: 0 .2rem}
 	
 	&-content {
 		position: relative;
+		overflow: hidden;
+
 		width: 100%;
 		height: 640px;
+
 		border-radius: 1rem;
-		overflow: hidden;
 		background: url('../assets/hero-background.png') center center / cover;
 
-		@include media(1440px) {font-size: 1rem;}
-		@include media(1024px) {font-size: .9rem;}
-		@include media(960px) {font-size: .8rem;}
-		@include media(768px) {font-size: 1rem;}
-		@include media(480px) {font-size: .8rem;}
-		@include media(425px) {font-size: .7rem;}
+		@include media(1024px) {height: 512px;}
+		@include media(768px) {height: 400px;}
+	
+
 	}
 
 	&-info {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: auto;
-		width: 60%;
-		z-index: 1;
-		text-align: center;
-		padding: 2rem;
-		
-		@include flex(column, nowrap, center, center);
-		gap: 1.5rem;
+		@include flex(column, nowrap, center, start);
+		gap: 1rem;
 
-		@include media(1024px) {width: 90%;}
-		@include media(768px) {width: 100%;}
-		
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 10rem;
+		z-index: 500;
+
+		margin: auto;
+		width: 100%;
+
+		@include media(1440px) {left: 5rem;}
+		@include media(1024px) {left: 2rem;}
+		@include media(480px) {left: 0; padding: 1rem ; top: auto;  gap: .6rem; background: var(--gradient-opacity)}
 	}
 
-
 	&-tag {
-		font-size: .9em;
+		padding: .5rem 1rem;
+
+		font-size: .9rem;
 		text-transform: uppercase;
-		letter-spacing: .3em;
-		padding: .6rem 1rem;
-		border-radius: 1rem;
+		letter-spacing: .2rem;
+		
 		color: var(--white);
 		background-color: #000;
+		border-radius: 1rem;
+
+		@include media(768px) {font-size: .8rem;}
+		@include media(480px) {font-size: .6rem;}
+		@include media(375px) {letter-spacing: .1rem;}
 	}
 
 	&-titles {
-		width: 100%;
 		position: relative;
+		width: 100%;
 		height: 6rem;	
+		@include media(1024px) {height: 5rem;}
+		@include media(768px) {height: 4.5rem;}
+		@include media(480px) {height: 3.5rem;}
+		@include media(375px) {height: 5rem;}
 	}
 
 
 	&-title {
 		position: absolute;
-		width: 100%;
-		font-size: clamp(2em, 1.5714em + 2.1429vw, 2.5em);
-		font-family: var(--type-secondary);
+		width: 60%;
+
+		font-size: 2.5rem;
 		font-weight: 800;
+		
 		color: var(--white);
+		
 		opacity: 0;
 		transition: opacity 1s ease;
 
+		&:nth-child(3) {
+			width: 50%;
+			@include media(1024px) {width: 60%;}
+			@include media(768px) {width: 70%;}
+			@include media(480px) {width: 100%;}
+		}
+		&:nth-child(4) {
+			width: 54%;
+			@include media(1024px) {width: 60%;}
+			@include media(768px) {width: 70%;}
+			@include media(480px) {width: 100%;}
+		}
+		&:nth-child(5) {
+			width: 40%;
+			@include media(1024px) {width: 60%;}
+			@include media(480px) {width: 100%;}
+		}
+		@include media(1024px) {font-size: 2.2rem;}
+		@include media(768px) {font-size: 1.8rem;}
+		@include media(480px) {font-size: 1.4rem;}
 		
 	}
 
@@ -73,48 +105,72 @@
 	}
 
 	&-description {
-		font-size: 1.2em;
+		width: 40%;
+
+		font-size: 1rem;
+		line-height: 1.6rem;
+
 		color: var(--white);
-		line-height: 1.6em;
+
+		@include media(1024px) {width: 50%;}
+		@include media(768px) {font-size: .9rem; line-height: 1.4rem;}
+		@include media(480px) {width: 100%; font-size: .8rem; line-height: 1.2rem;}
 	}
 
 	&-link {
-		font-size: 1.1em;
+		padding: 1rem;
+		
+		font-size: 1rem;
 		font-weight: 600;
+
 		color: var(--white);
-		padding: 1rem 2rem;
 		outline: 2px solid var(--ligth-gray);
-		border-radius: 1rem;
+		border-radius: .4rem;
 
 		scale: 1;
 		transition: all 0.2s ease;
 
 		&:hover {
 			background-color: #000;
+			
 			outline-color: var(--principal);
-			outline: 2px solid var(--black);
+			outline: 2px solid #000;
 		}
 		&:active {
 			scale: .95;
 
 		}
+
+		@include media(480px)  {padding: .9rem 1rem; font-size: .8rem;}
 	}
 
 	&-images {
 		position: relative;
+		width: 100%;
 		height: 100%;
-		
+
+
 	}
 
 	&-image {
 		position: absolute;
-		height: 100%;
-		right: 48px;
-		object-fit:contain;
-		object-position: center center;
+		top: 0;
+		right: 10rem;
+
+		height: inherit;
+		width: auto;
+
+		object-fit: contain;
+		object-position: center right;
+
 		opacity: 0;
 		transition: opacity 1s ease;
 
+
+
+		@include media(1440px) {right: 5rem;}
+		@include media(1024px) {right: 2rem;}
+		@include media(480px)  {right: 0; object-position: top center;}
 	}
 
 	&-image.active {

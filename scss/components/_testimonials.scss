@@ -1,31 +1,54 @@
 .testimonials {
-	&-slides {
-		margin-bottom: 4rem;
-	}
-	&-slide {
-		margin: 0 auto;
-		max-width: 960px;
-		padding: 6rem;
-		border-radius: 1rem;
-		text-align: center;
-		border: 1px solid #f5f5f5;
-		@include flex(column, nowrap, center, center);
-		gap: 1rem;
 
-		transition: all .6s ease;
+	&-container {
+		position: relative;
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
 
-		&:hover {
-			box-shadow: 0 0 2em rgba(133, 106, 106, 0.12);
-		}
+		overflow: hidden;
 
 		@include media(768px) {
-			padding:4rem;
-		}
-
-		@include media(480px) {
-			padding: 2rem;
+			width: 100%;
 		}
 	}
+	
+	&-slides {
+		width: 500%;
+		height: 500px;
+
+		margin-left: -100%;
+
+		@include flex(row, nowrap, start, center);
+
+		@include media(480px) {
+			height: 600px;
+		}
+	}
+	&-slide {
+		height: inherit;
+		width: 100%;
+		padding: 2rem;
+		transition: all .5s ease;
+
+		@include media(480px) {
+				padding: 0 1rem;
+			}
+
+		&-content {
+			@include flex(column, nowrap, center, center);
+			gap: 1rem;
+			outline: 1px solid var(--ligth-gray);
+			border-radius: 1rem;
+			text-align: center;
+			padding: 2rem;
+
+		
+		}
+
+	}
+
+	
 	&-image {
 		max-width: 8rem;
 	}
@@ -35,10 +58,11 @@
 	}
 	&-rol {
 		color: var(--gray);
-		font-size: .9em
+		font-size: .8em
 	}
 	&-paragraph {
 		max-width: 560px;
+		font-size: .9rem;
 		line-height: 1.5rem;
 	}
 }

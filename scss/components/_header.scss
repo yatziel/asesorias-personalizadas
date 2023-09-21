@@ -1,74 +1,47 @@
 .header {
-	width: 100%;
 	position: fixed;
 	top: 0;
+	left: 0;
 	z-index: 1000;
 
-	border-bottom: 1px solid var(--ligth-gray);
+	width: 100%;
+
 	background-color: var(--white);
-	box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid var(--ligth-gray);
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
 	&-content {
-		padding: 1em;
+		
 		@include flex(row, nowrap, space-between, center);
+		gap: 1rem;
 
+		padding: 1rem 0;
 
-		@include media(1440px) 	{font-size: 1rem;		}
-		@include media(1024px) 	{font-size: 0.875rem;}
-		@include media(900px) 	{font-size: 0.756rem;}		
-		@include media(800px) 	{font-size: 0.7rem;	}
-		@include media(768px) 	{font-size: 1rem;		} 
-		@include media(425px) 	{font-size: .875rem;	}
-		@include media(375px) 	{font-size: .756rem;	}
-		@include media(320px) 	{font-size: .7rem;		}
 	}
 
+	&-title {}
 	&-brand {
-		@include flex(row, nowrap, start, center);
-		gap: 1em;
+		min-width: 12rem;
+		height: auto;
 	}
 
-	&-symbol {
-		width: 4.6em;
-	}
-
-	&-symbol svg {
-		fill: var(--primary);
-	}
-
-	&-title {
-		font-size: 1.7em;
-		line-height: 1em;
-		font-weight: 800;
-		margin-bottom: 0.1em;
-		color: var(--primary);
-
-		transition: all 0.4s ease;
-
-	}
-
-	&-tagline {
-		font-size: 0.75em;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.25em;
-
-		transition: all 0.4s ease;
-}
+	/* Navbar Menu Elements */
 
 	&-nav {
 		position: relative;
 
 		@include media(768px) {
-			display: none;
 			position: absolute;
-			width: 92%;
+			top: 100%;
 			left: 0;
 			right: 0;
-			top: 100%;
-			margin: 1em auto;
-			border-radius: 1rem;
+		
+			display: none;
+			width: 96%;
+			margin: 1rem auto 0 auto;
+
 			background: var(--gradient-primary);
+			border-radius: 1rem;
 
 			&.menu-show {
 				display: block;
@@ -77,8 +50,13 @@
 	}
 
 	&-ul {
+
 		@include flex(row, nowrap, center, center);
-		gap: 0.5em;
+		gap: 1rem;
+
+		@include media(1024px) {
+			gap: .5rem;
+		}
 
 		@include media(768px) {
 			@include flex(column, nowrap, center, center);
@@ -87,24 +65,27 @@
 	}
 
 	&-li {
+
 		position: relative;
 
 		&::after {
 			content: '';
 			position: absolute;
-			width: 100%;
-			height: 3px;
 			left: 0;
 			bottom: 4px;
+
+			width: 100%;
+			height: 3px;
+			
+			background: var(--gradient-primary);
 			border-radius: 4px;
-			background-color: var(--primary);
+
 			transform: scaleX(0);
 			transform-origin: center;
 			transition: transform 0.2s ease;
 		}
 
 		&:hover::after {
-			opacity: 1;
 			transform: scaleX(1);
 		}
 
@@ -122,68 +103,109 @@
 	}
 
 	&-a {
-		font-size: 1em;
+		position: relative;
+		
+		padding: 1rem;
+
+		font-size: 1rem;
 		font-weight: 600;
 		text-align: center;
 
-		position: relative;
-		padding: 1em;
 		transition: all 0.4s ease;
 
 		&:hover {
 			color: var(--primary);
 		}
 
+		@include media(1024px) {
+			padding: .5rem;
+		}
+
 		@include media(768px) {
-			font-size: 1em;
-			padding: 1.6em 0;
+			padding: 2rem 0;
+			
 			color: var(--white);
+
+			&:hover {
+					color: var(--white);
+			}
 		}
 	}
 
-	&-side {
+	/* Navbar Extra Elements */
+
+	&-extra {
 		@include flex(row, nowrap, end, center);
 	}
 
-	&-li__side {
-	}
+	&-item {}
 
 	&-link {
-		font-size: 1em;
-		font-weight: 600;
-
 		@include flex(row, nowrap, center, center);
-		gap: 0.5em;
+		gap: .5rem;
 
-		outline: 0.25rem solid var(--white);
-		border-radius: 1rem;
 		padding: 1rem;
 
-		scale: 1;
-
+		font-size: 1rem;
+		font-weight: 600;
+		
 		color: var(--white);
 		background: var(--gradient-primary);
+		border-radius: 1rem;
 
+		scale: 1;
 		transition: all 0.2s ease;
 
 		&:hover {
-			outline-color: var(--ligth-gray);
 			background: var(--gradient-secondary);
+			scale: 1.05;
 		}
 
 		&:active {
+			background: var(--gradient-primary);
 			scale: .95;
-			background-color: var(--primary);
-		}
+		}	
 
 		@include media(768px) {
-			display: none;
+
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -100vh;
+
+			display: block;
+			width: 96%;
+			margin: 0 auto 6rem auto;
+
+
+			text-align: center;
+			font-size: 1.2rem;
+			
+			background: var(--gradient-primary);
+
+			&:hover {
+				scale: 1;
+				background: var(--gradient-primary);
+			}
+			
+			&:active {
+				scale: 1;
+				background: var(--gradient-primary);
+			}
+
 		}
 	}
 
 	&-svg {
+		width: 1.5em;		
 		fill: var(--white);
-		width: 1.5em;
+		display: inline-block;
+
+		@include media(768px) {
+			margin-right: .5rem;
+			margin-bottom: .2rem;
+			vertical-align: middle;
+		}
 	}
 
 	&-button {
@@ -191,10 +213,21 @@
 
 		@include media(768px) {
 			display: block;
-			border-radius: 1rem;
+
 			padding: 1em;
+			
 			background: var(--gradient-primary);
 			color: var(--white);
+			
+			border-radius: 1rem;
+
+			&:hover {
+				background: var(--gradient-primary);
+			}
+			
+			&:active {
+				background: var(--gradient-primary);
+			}
 		}
 	}
 }
