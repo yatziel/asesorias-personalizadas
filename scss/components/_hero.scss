@@ -1,179 +1,36 @@
 .hero {
-	padding: 1rem 0;
-
-	
-	@include media(480px) {padding: 0 .2rem}
+	padding-top: 1rem;
 	
 	&-content {
-		position: relative;
 		overflow: hidden;
-
-		width: 100%;
-		height: 640px;
-
 		border-radius: 1rem;
-		background: url('../assets/hero-background.png') center center / cover;
-
-		@include media(1024px) {height: 512px;}
-		@include media(768px) {height: 400px;}
-	
-
-	}
-
-	&-info {
-		@include flex(column, nowrap, center, start);
-		gap: 1rem;
-
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 10rem;
-		z-index: 500;
-
-		margin: auto;
-		width: 100%;
-
-		@include media(1440px) {left: 5rem;}
-		@include media(1024px) {left: 2rem;}
-		@include media(480px) {left: 0; padding: 1rem ; top: auto;  gap: .6rem; background: var(--gradient-opacity)}
-	}
-
-	&-tag {
-		padding: .5rem 1rem;
-
-		font-size: .9rem;
-		text-transform: uppercase;
-		letter-spacing: .2rem;
-		
-		color: var(--white);
-		background-color: #000;
-		border-radius: 1rem;
-
-		@include media(768px) {font-size: .8rem;}
-		@include media(480px) {font-size: .6rem;}
-		@include media(375px) {letter-spacing: .1rem;}
-	}
-
-	&-titles {
-		position: relative;
-		width: 100%;
-		height: 6rem;	
-		@include media(1024px) {height: 5rem;}
-		@include media(768px) {height: 4.5rem;}
-		@include media(480px) {height: 3.5rem;}
-		@include media(375px) {height: 5rem;}
-	}
-
-
-	&-title {
-		position: absolute;
-		width: 60%;
-
-		font-size: 2.5rem;
-		font-weight: 800;
-		
-		color: var(--white);
-		
-		opacity: 0;
-		transition: opacity 1s ease;
-
-		&:nth-child(3) {
-			width: 50%;
-			@include media(1024px) {width: 60%;}
-			@include media(768px) {width: 70%;}
-			@include media(480px) {width: 100%;}
-		}
-		&:nth-child(4) {
-			width: 54%;
-			@include media(1024px) {width: 60%;}
-			@include media(768px) {width: 70%;}
-			@include media(480px) {width: 100%;}
-		}
-		&:nth-child(5) {
-			width: 40%;
-			@include media(1024px) {width: 60%;}
-			@include media(480px) {width: 100%;}
-		}
-		@include media(1024px) {font-size: 2.2rem;}
-		@include media(768px) {font-size: 1.8rem;}
-		@include media(480px) {font-size: 1.4rem;}
-		
-	}
-
-	&-title.active {
-		opacity: 1;
-	}
-
-	&-description {
-		width: 40%;
-
-		font-size: 1rem;
-		line-height: 1.6rem;
-
-		color: var(--white);
-
-		@include media(1024px) {width: 50%;}
-		@include media(768px) {font-size: .9rem; line-height: 1.4rem;}
-		@include media(480px) {width: 100%; font-size: .8rem; line-height: 1.2rem;}
-	}
-
-	&-link {
-		padding: 1rem;
-		
-		font-size: 1rem;
-		font-weight: 600;
-
-		color: var(--white);
-		outline: 2px solid var(--ligth-gray);
-		border-radius: .4rem;
-
-		scale: 1;
-		transition: all 0.2s ease;
-
-		&:hover {
-			background-color: #000;
-			
-			outline-color: var(--principal);
-			outline: 2px solid #000;
-		}
-		&:active {
-			scale: .95;
-
-		}
-
-		@include media(480px)  {padding: .9rem 1rem; font-size: .8rem;}
 	}
 
 	&-images {
+		display: flex;
 		position: relative;
 		width: 100%;
 		height: 100%;
-
-
 	}
-
+		
 	&-image {
-		position: absolute;
-		top: 0;
-		right: 10rem;
 
-		height: inherit;
-		width: auto;
+		flex: 0 0 auto;
+		width: 100%;	
+		height: auto;
+		margin-left: -100%;
 
-		object-fit: contain;
-		object-position: center right;
 
 		opacity: 0;
 		transition: opacity 1s ease;
+	}
 
-
-
-		@include media(1440px) {right: 5rem;}
-		@include media(1024px) {right: 2rem;}
-		@include media(480px)  {right: 0; object-position: top center;}
+	&-image:first-child {
+		margin-left: 0;
 	}
 
 	&-image.active {
 		opacity: 1;
 	}
+
 }

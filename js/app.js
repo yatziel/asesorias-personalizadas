@@ -18,13 +18,14 @@ var heroTitles = document.querySelectorAll('.hero-title');
 var heroImages = document.querySelectorAll('.hero-image');
 var i = 0;
 setInterval(function () {
-  heroTitles[i].classList.remove('active');
+  // heroTitles[i].classList.remove('active')
   heroImages[i].classList.remove('active');
   i++;
   if (i >= heroImages.length) {
     i = 0;
   }
-  heroTitles[i].classList.add('active');
+
+  // heroTitles[i].classList.add('active')
   heroImages[i].classList.add('active');
 }, 3000);
 

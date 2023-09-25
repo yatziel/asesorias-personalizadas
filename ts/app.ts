@@ -16,13 +16,13 @@ const heroImages = (document.querySelectorAll('.hero-image') as NodeList)
 let i : number = 0
 
 setInterval ( function () {
-		heroTitles[i].classList.remove('active')
+		// heroTitles[i].classList.remove('active')
 		heroImages[i].classList.remove('active')
 		i++
 
 		if (i >= heroImages.length) { i = 0 }
 
-		heroTitles[i].classList.add('active')
+		// heroTitles[i].classList.add('active')
 		heroImages[i].classList.add('active')
 
 	}, 3000
