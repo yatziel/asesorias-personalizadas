@@ -3,13 +3,13 @@
 /* Definimos las Custom properties */
 :root {
   /* Colores */
-  --primary: #490617;
-  --secondary: #0c0404;
+  --primary: #b49614;
+  --secondary: #281d0c;
   --black: #2d2d2d;
   --gray: #9b9b9b;
   --ligth-gray: #ede4e5;
   --white: #fafafa;
-  --gradient-primary: linear-gradient(180deg, #d34444 0%, #7b1824 61.98%, #4d0918 100%);
+  --gradient-primary: linear-gradient(180deg, #b49614 0%, #87710e 100%);
   --gradient-secondary: linear-gradient(180deg, #521818 0%, #41050c 61.98%, #310c14 100%);
   --gradient-opacity: linear-gradient(180deg, #d3444400 0%, #4d0918 70%);
   /* Tipografía */
@@ -285,7 +285,7 @@ body {
   bottom: 4px;
   width: 100%;
   height: 3px;
-  background: var(--gradient-primary);
+  background-color: var(--primary);
   border-radius: 4px;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -541,6 +541,7 @@ body {
 
 .advisories {
   background-color: var(--white);
+  background-color: red;
 }
 .advisories .header-section {
   position: sticky;
@@ -549,6 +550,7 @@ body {
   padding-top: 7rem;
   margin-bottom: 1rem;
   background-color: var(--white);
+  background-color: blue;
 }
 .advisories-controls {
   display: -webkit-box;
@@ -592,25 +594,36 @@ body {
   stroke: var(--primary);
 }
 .advisories-programs {
+  /* 		position: relative;
+  		height: 1400px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  height: 1400px;
-}
-@media screen and (max-width: 768px) {
-  .advisories-programs {
-    height: 1200px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .advisories-programs {
-    height: 1600px;
-  }
+  width: 100%;
+  height: 100%;
+  /* 	@include media(768px) {
+  		height: 1200px
+  	}
+
+  	@include media(480px) {
+  		height: 1600px
+  	} */
 }
 .advisories-program {
-  position: absolute;
-  z-index: 100;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 100%;
-  overflow: hidden;
-  display: none;
+  height: auto;
+  margin-left: -100%;
+  /* 		position: absolute;
+  		z-index: 100;
+  		width: 100%;
+  		overflow: hidden; */
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 .advisories-program > h5 {
   text-align: center;
@@ -619,7 +632,11 @@ body {
   font-weight: 600;
 }
 .advisories-program.active {
-  display: block;
+  /* 			display: block; */
+  opacity: 1;
+}
+.advisories-program:first-child {
+  margin-left: 0;
 }
 .advisories-cover {
   max-width: 900px;
@@ -799,26 +816,16 @@ body {
   width: 1.3rem;
 }
 .advisories-modules {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  scroll-behavior: auto;
-  overflow-y: auto;
-  overscroll-behavior-x: contain;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  /* 	scroll-behavior: auto;
+  	overflow-y: auto;
+  	overscroll-behavior-x: contain;
+  	scroll-snap-type: x mandatory;
+  	scrollbar-width: none; */
   padding: 2rem;
 }
 .advisories-modules::-webkit-scrollbar {

@@ -1,5 +1,6 @@
 .advisories {
 	background-color: var(--white);
+	background-color: red;
 
 	& .header-section {
 		position: sticky;
@@ -9,6 +10,7 @@
 		margin-bottom: 1rem;
 
 		background-color: var(--white);
+		background-color: blue
 
 	}
 
@@ -46,25 +48,35 @@
 	}
 
 	&-programs {
+/* 		position: relative;
+		height: 1400px; */
+		display: flex;
 		position: relative;
-		height: 1400px;
+		width: 100%;
+		height: 100%;
 
 
-		@include media(768px) {
+	/* 	@include media(768px) {
 			height: 1200px
 		}
 
 		@include media(480px) {
 			height: 1600px
-		}
+		} */
 	}
 
 	&-program {
-		position: absolute;
+		flex: 0 0 auto;
+		width: 100%;
+		height: auto;
+		margin-left: -100%;
+
+/* 		position: absolute;
 		z-index: 100;
 		width: 100%;
-		overflow: hidden;
-		display: none;
+		overflow: hidden; */
+		opacity: 0;
+		transition: opacity 1s ease;
 
 		&>h5 {
 			text-align: center;
@@ -74,8 +86,13 @@
 		}
 
 		&.active {
-			display: block;
+/* 			display: block; */
+			opacity: 1;
 		}
+	}
+
+	&-program:first-child {
+		margin-left: 0;
 	}
 
 	&-cover {
@@ -194,14 +211,15 @@
 
 	&-modules {
 
-		@include flex(row, nowrap, start, top);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		gap: 1rem;
 
-		scroll-behavior: auto;
+	/* 	scroll-behavior: auto;
 		overflow-y: auto;
 		overscroll-behavior-x: contain;
 		scroll-snap-type: x mandatory;
-		scrollbar-width: none;
+		scrollbar-width: none; */
 
 		padding: 2rem;
 
