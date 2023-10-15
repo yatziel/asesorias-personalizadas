@@ -20,6 +20,7 @@
 	}
 
 	&-title {}
+
 	&-brand {
 		min-width: 12rem;
 		height: auto;
@@ -108,7 +109,7 @@
 		padding: 1rem;
 
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 400;
 		text-align: center;
 
 		transition: all 0.4s ease;
@@ -148,6 +149,8 @@
 
 		font-size: 1rem;
 		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: .15rem;
 		
 		color: var(--white);
 		background: var(--gradient-primary);
