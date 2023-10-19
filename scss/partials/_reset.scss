@@ -1,19 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-
-
 /* Definimos las Custom properties */
-:root {
-	/* Colores */
-	--primary: #b49614;
-	--secondary: #281d0c;
-	--black: #2d2d2d;
-	--gray: #9b9b9b;
-	--ligth-gray: #ede4e5;
-	--white: #fafafa;
 
-	--gradient-primary: linear-gradient(180deg, #b49614 0%, #87710e 100%);
-	--gradient-secondary: linear-gradient(180deg, #521818 0%, #41050c 61.98%, #310c14 100%);
-	--gradient-opacity: linear-gradient(180deg, #d3444400 0%, #4d0918 70%);
+:root {
+
+	/* Colores */
+
+	--color-yellow: #B49614;
+	--color-black: #050401;
+	--color-white: #fafafa;
+
+	--color-border: #0504010e;
+	--color-shadow: #0504011c;
+
+	
+	/* 
+	
+	--black: #050401;
+	--gray: #9b9b9b;
+	
+	
+	--gradient-primary: linear-gradient(180deg, var(--primary) 0%, #87710e 100%);
+	--gradient-secondary: linear-gradient(180deg, #2d2d2d 0%, var(--secondary) 100%);
+	--gradient-opacity: linear-gradient(180deg, #d3444400 0%, #b49614 70%); 
+
+	*/
 
 	/* Tipografía */
 	--type-primary: 'Poppins', sans-serif;
@@ -107,8 +116,8 @@ q:after {
 
 /* (Opcional) Configuramos el texto que seleccionamos */
 ::selection {
-	background-color: var(--primary);
-	color: var(--white);
+	background-color: var(--color-black);
+	color: var(--color-white);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -147,8 +156,8 @@ body {
 	min-height: 100vh;
 	font-size: 100%;
 	font-family: var(--type-primary);
-	color: var(--black);
-	background-color: var(--white);
+	color: var(--color-black);
+	background-color: var(--color-white);
 	/* (Opcional) */
 	hyphens: none;
 	/* (Opcional) */

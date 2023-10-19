@@ -31,31 +31,37 @@ setInterval(function () {
 
 /* Programs Slider */
 
-var program = document.querySelectorAll('.advisories-program');
-var buttonPrev = document.getElementsByClassName('btn-left');
-var buttonNext = document.getElementsByClassName('btn-rigth');
-
-/* let p: number = 0;
-
-function nextProgram() {
-	program[p].classList.remove('active')
-	p++
-
-	if(p >= program.length) { p = 0 }
-
-	program[p].classList.add('active');
+var prevButton = document.getElementById('prev');
+var nextButton = document.getElementById('next');
+var items = document.querySelectorAll('.advisories-program');
+var j = 0;
+function updateButtons() {
+  prevButton.disabled = j === 0;
+  nextButton.disabled = j === items.length - 1;
 }
- */
-
-var p = 0;
-setInterval(function () {
-  program[p].classList.remove('active');
-  p++;
-  if (p >= program.length) {
-    p = 0;
+function setActiveItem() {
+  items.forEach(function (item, index) {
+    item.classList.toggle('active', index === j);
+  });
+}
+function handleButtonClick(increment) {
+  j += increment;
+  setActiveItem();
+  updateButtons();
+}
+prevButton.addEventListener('click', function () {
+  if (j > 0) {
+    handleButtonClick(-1);
   }
-  program[p].classList.add('active');
-}, 3000);
+});
+nextButton.addEventListener('click', function () {
+  if (j < items.length - 1) {
+    handleButtonClick(1);
+  }
+});
+
+// Inicializa el estado de los botones al cargar la página
+updateButtons();
 
 /* Testimonials Transition */
 

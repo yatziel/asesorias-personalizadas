@@ -18,16 +18,16 @@
 		transition: all .6s ease;
 
 		&:not(:last-child){
-			background-color: var(--white);
+			background-color: var(--color-white);
 		}
 
 		&:last-child{
 			grid-column-start: 2;
 			grid-column-end: -1;
 
-			background: var(--gradient-primary);
-			color: var(--white);
-			outline: .25rem solid var(--white);
+			background-color: var(--color-yellow);
+			color: var(--color-white);
+			outline: .25rem solid var(--color-white);
 			
 			@include media (1024px) {
 				grid-column-start: 1;
@@ -36,16 +36,17 @@
 			
 		}
 		&:hover {
-			box-shadow: 0 0 1.5em rgba(0, 0, 0, .2);
+			@include shadow();
 		}
 
 		@include media (768px) {
 			padding: 2rem;
 		}
+
 	}
 	&-icon {
 		width: 6rem;
-		margin: 0 auto;
+		margin: 0 auto;	
 	}
 	&-title {
 		font-size: 1.4rem;

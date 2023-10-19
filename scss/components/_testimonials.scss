@@ -38,7 +38,7 @@
 		&-content {
 			@include flex(column, nowrap, center, center);
 			gap: 1rem;
-			outline: 1px solid var(--ligth-gray);
+			outline: 1px solid var(--color-border);
 			border-radius: 1rem;
 			text-align: center;
 			padding: 2rem;
@@ -57,7 +57,7 @@
 		font-weight: 600;
 	}
 	&-rol {
-		color: var(--gray);
+		color: var(--color-yellow);
 		font-size: .8em
 	}
 	&-paragraph {

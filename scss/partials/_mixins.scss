@@ -1,3 +1,11 @@
+@mixin border() {
+	border-bottom: 1px solid var(--color-border);
+}
+
+@mixin shadow() {
+	box-shadow: 0 0 1rem var(--color-shadow);
+}
+
 @mixin flex($dir, $wrap, $just, $aling) {
 	display: flex;
 	flex-flow: $dir $wrap;

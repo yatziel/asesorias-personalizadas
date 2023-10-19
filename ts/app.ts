@@ -31,37 +31,43 @@ setInterval ( function () {
 
 /* Programs Slider */
 
-const program = document.querySelectorAll('.advisories-program')
 
-const buttonPrev = document.getElementsByClassName('btn-left')
-const buttonNext = document.getElementsByClassName('btn-rigth')
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const items = document.querySelectorAll('.advisories-program');
+let j = 0;
 
-/* let p: number = 0;
-
-function nextProgram() {
-	program[p].classList.remove('active')
-	p++
-
-	if(p >= program.length) { p = 0 }
-
-	program[p].classList.add('active');
+function updateButtons() {
+	prevButton.disabled = j === 0;
+	nextButton.disabled = j === items.length - 1;
 }
- */
 
+function setActiveItem() {
+	items.forEach((item, index) => {
+		item.classList.toggle('active', index === j);
+	});
+}
 
-let p: number = 0;
- setInterval(function () {
-	program[p].classList.remove('active');
-	p++;
+function handleButtonClick(increment) {
+	j += increment;
+	setActiveItem();
+	updateButtons();
+}
 
-	if (p >= program.length) {
-		p = 0;	
+prevButton.addEventListener('click', () => {
+	if (j > 0) {
+		handleButtonClick(-1);
 	}
+});
 
-	program[p].classList.add('active');
-}, 3000);
+nextButton.addEventListener('click', () => {
+	if (j < items.length - 1) {
+		handleButtonClick(1);
+	}
+});
 
-
+// Inicializa el estado de los botones al cargar la página
+updateButtons();
 
 
 
@@ -108,3 +114,5 @@ for (let i = 0; i < acc.length; i++) {
 		}
 	});
 } 
+
+

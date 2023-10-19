@@ -6,9 +6,11 @@
 
 	width: 100%;
 
-	background-color: var(--white);
-	border-bottom: 1px solid var(--ligth-gray);
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+	background-color: var(--color-white);
+	
+	@include border();
+	@include shadow();
+	
 
 	&-content {
 		
@@ -19,11 +21,9 @@
 
 	}
 
-	&-title {}
-
 	&-brand {
 		min-width: 12rem;
-		height: auto;
+		max-width: 14rem;
 	}
 
 	/* Navbar Menu Elements */
@@ -41,7 +41,7 @@
 			width: 96%;
 			margin: 1rem auto 0 auto;
 
-			background: var(--gradient-primary);
+			background-color: var(--color-yellow);
 			border-radius: 1rem;
 
 			&.menu-show {
@@ -78,7 +78,7 @@
 			width: 100%;
 			height: 3px;
 			
-			background-color: var(--primary);
+			background-color: var(--color-yellow);
 			border-radius: 4px;
 
 			transform: scaleX(0);
@@ -94,7 +94,7 @@
 			width: 100%;
 
 			&:not(:last-child) {
-				border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+				@include border();
 			}
 
 			&::after {
@@ -109,13 +109,13 @@
 		padding: 1rem;
 
 		font-size: 1rem;
-		font-weight: 400;
+		font-weight: 600;
 		text-align: center;
 
 		transition: all 0.4s ease;
 
 		&:hover {
-			color: var(--primary);
+			color: var(--color-yellow);
 		}
 
 		@include media(1024px) {
@@ -125,10 +125,10 @@
 		@include media(768px) {
 			padding: 2rem 0;
 			
-			color: var(--white);
+			color: var(--color-white);
 
 			&:hover {
-					color: var(--white);
+					color: var(--color-white);
 			}
 		}
 	}
@@ -152,20 +152,20 @@
 		text-transform: uppercase;
 		letter-spacing: .15rem;
 		
-		color: var(--white);
-		background: var(--gradient-primary);
+		color: var(--color-white);
+		background-color: var(--color-yellow);
 		border-radius: 1rem;
 
 		scale: 1;
 		transition: all 0.2s ease;
 
 		&:hover {
-			background: var(--gradient-secondary);
+			background-color: var(--color-black);
 			scale: 1.05;
 		}
 
 		&:active {
-			background: var(--gradient-primary);
+			background-color: var(--color-yellow);
 			scale: .95;
 		}	
 
@@ -184,16 +184,16 @@
 			text-align: center;
 			font-size: 1.2rem;
 			
-			background: var(--gradient-primary);
+			background-color: var(--color-yellow);
 
 			&:hover {
 				scale: 1;
-				background: var(--gradient-primary);
+				background-color: var(--color-yellow);
 			}
 			
 			&:active {
 				scale: 1;
-				background: var(--gradient-primary);
+				background-color: var(--color-yellow);
 			}
 
 		}
@@ -201,7 +201,7 @@
 
 	&-svg {
 		width: 1.5em;		
-		fill: var(--white);
+		fill: var(--color-white);
 		display: inline-block;
 
 		@include media(768px) {
@@ -219,17 +219,17 @@
 
 			padding: 1em;
 			
-			background: var(--gradient-primary);
-			color: var(--white);
+			background-color: var(--color-yellow);
+			color: var(--color-white);
 			
 			border-radius: 1rem;
 
 			&:hover {
-				background: var(--gradient-primary);
+				background-color: var(--color-yellow);
 			}
 			
 			&:active {
-				background: var(--gradient-primary);
+				background-color: var(--color-yellow);
 			}
 		}
 	}
