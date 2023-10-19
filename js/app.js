@@ -27,7 +27,7 @@ setInterval(function () {
 
   // heroTitles[i].classList.add('active')
   heroImages[i].classList.add('active');
-}, 3000);
+}, 5000);
 
 /* Programs Slider */
 
