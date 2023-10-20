@@ -18,6 +18,7 @@
 		height: 500px;
 
 		margin-left: -100%;
+		
 
 		@include flex(row, nowrap, start, center);
 
@@ -29,22 +30,32 @@
 		height: inherit;
 		width: 100%;
 		padding: 2rem;
-		transition: all .5s ease;
+		
+
+		
 
 		@include media(480px) {
 				padding: 0 1rem;
-			}
+		}
 
 		&-content {
+
 			@include flex(column, nowrap, center, center);
 			gap: 1rem;
-			outline: 1px solid var(--color-border);
-			border-radius: 1rem;
+			
 			text-align: center;
 			padding: 2rem;
 
-		
+			@include border();
+			@include border-radius();
+			@include transition();
+
+			&:hover {
+					@include shadow();
+			}
 		}
+
+
 
 	}
 

@@ -26,9 +26,11 @@
 	&-button {
 		cursor: pointer;
 		transform: scale(1);
-		transition: all .3s ease;
+		
+		@include transition();
 
 		&:hover {
+			filter:brightness(0);
 			transform: scale(1.1);
 		}
 
@@ -41,9 +43,10 @@
 	}
 
 	&-arrow {
-		width: 3.2rem;
+		width: 4rem;
 		height: auto;
 		stroke: var(--color-yellow);
+		
 	}
 
 	&-programs {
@@ -163,7 +166,9 @@
 					color: var(--color-white);
 
 					scale: 1;
-					transition: all 0.2s ease;
+					
+
+					@include transition();
 
 					&:hover {
 						background-color: var(--color-black);
@@ -219,10 +224,13 @@
 
 	&-module {
 		min-width: 300px;
-		border-radius: 1em;
+		
 		overflow: hidden;
-		transition: all .6s ease;
 		background-color: #FFF;
+
+		@include border();
+		@include border-radius();
+		@include transition();
 
 		&:hover {
 			@include shadow();

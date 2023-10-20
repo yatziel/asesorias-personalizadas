@@ -1,0 +1,56 @@
+.payments {
+	&-card {
+		max-width: 600px;
+		
+		text-align: center;
+		
+		margin: 0 auto;
+	}
+	&-header {
+		margin-bottom: 2rem;
+
+	}
+	&-heading {
+		font-size: 2rem;
+		font-weight: 600;
+	}
+	&-subheading {
+		font-size: 1.2rem;
+
+		& b {
+			font-size: 1rem;
+			font-weight: 600;
+			color: var(--color-yellow);
+		}
+	}
+	&-content {
+		padding: 2rem;
+
+		color: var(--color-white);
+
+		@include border();
+		@include border-radius();
+
+		@include transition();
+
+		background-color: var(--color-black);
+
+		&:hover {
+			@include shadow();
+		}
+	}
+	&-type {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+	&-data {}
+	&-bullet {
+		color: var(--color-yellow);
+		margin-bottom: 1.2rem;
+		& b {
+			color: var(--color-white);
+			font-size: 1.2rem;
+			font-weight: 600;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 .features {
-	&-content {}
+
 	&-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -9,13 +9,14 @@
 		@include media (480px) {grid-template-columns: 1fr;}
 	}
 	&-item {
+
 		padding: 4rem;
 
 		text-align: center;
 
-		border-radius: 1rem;
-		
-		transition: all .6s ease;
+		@include border();
+		@include border-radius();
+		@include transition();
 
 		&:not(:last-child){
 			background-color: var(--color-white);
@@ -27,7 +28,6 @@
 
 			background-color: var(--color-yellow);
 			color: var(--color-white);
-			outline: .25rem solid var(--color-white);
 			
 			@include media (1024px) {
 				grid-column-start: 1;
@@ -35,6 +35,7 @@
 			}
 			
 		}
+
 		&:hover {
 			@include shadow();
 		}

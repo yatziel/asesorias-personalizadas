@@ -180,8 +180,7 @@ body {
   width: 100%;
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
-  -webkit-box-shadow: 0 0 1rem var(--color-shadow);
-          box-shadow: 0 0 1rem var(--color-shadow);
+  /* @include shadow(); */
   /* Navbar Menu Elements */
   /* Navbar Extra Elements */
 }
@@ -294,7 +293,7 @@ body {
     width: 100%;
   }
   .header-li:not(:last-child) {
-    border-bottom: 1px solid var(--color-border);
+    border: 1px solid var(--color-border);
   }
   .header-li::after {
     display: none;
@@ -484,9 +483,10 @@ body {
 .features-item {
   padding: 4rem;
   text-align: center;
+  border: 1px solid var(--color-border);
   border-radius: 1rem;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .features-item:not(:last-child) {
   background-color: var(--color-white);
@@ -498,7 +498,6 @@ body {
   grid-column-end: -1;
   background-color: var(--color-yellow);
   color: var(--color-white);
-  outline: 0.25rem solid var(--color-white);
 }
 @media screen and (max-width: 1024px) {
   .features-item:last-child {
@@ -564,10 +563,12 @@ body {
   cursor: pointer;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .advisories-button:hover {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -580,7 +581,7 @@ body {
           transform: scale(1);
 }
 .advisories-arrow {
-  width: 3.2rem;
+  width: 4rem;
   height: auto;
   stroke: var(--color-yellow);
 }
@@ -768,8 +769,8 @@ body {
   background-color: var(--color-yellow);
   color: var(--color-white);
   scale: 1;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .advisories-cover-buttons a:first-child:hover {
   background-color: var(--color-black);
@@ -808,11 +809,12 @@ body {
 }
 .advisories-module {
   min-width: 300px;
-  border-radius: 1em;
   overflow: hidden;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
   background-color: #FFF;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .advisories-module:hover {
   -webkit-box-shadow: 0 0 1rem var(--color-shadow);
@@ -1026,8 +1028,6 @@ body {
   height: inherit;
   width: 100%;
   padding: 2rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 @media screen and (max-width: 480px) {
   .testimonials-slide {
@@ -1049,10 +1049,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  outline: 1px solid var(--color-border);
-  border-radius: 1rem;
   text-align: center;
   padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.testimonials-slide-content:hover {
+  -webkit-box-shadow: 0 0 1rem var(--color-shadow);
+          box-shadow: 0 0 1rem var(--color-shadow);
 }
 .testimonials-image {
   max-width: 8rem;
@@ -1103,12 +1109,18 @@ body {
 }
 .faqs-item {
   font-size: 1.1rem;
-  border: 1px solid var(--color-border);
   width: 100%;
   color: var(--color-black);
-  border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.faqs-item:hover {
+  -webkit-box-shadow: 0 0 1rem var(--color-shadow);
+          box-shadow: 0 0 1rem var(--color-shadow);
 }
 .faqs-question {
   width: 100%;
@@ -1155,7 +1167,6 @@ body {
           transform: rotate(90deg);
 }
 .faqs-answer {
-  background-color: var(--color-border);
   overflow: hidden;
   max-height: 0;
   -webkit-transition: max-height 0.2s ease-out;
@@ -1175,6 +1186,56 @@ body {
   list-style: disc;
 }
 
+.payments-card {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+.payments-header {
+  margin-bottom: 2rem;
+}
+.payments-heading {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.payments-subheading {
+  font-size: 1.2rem;
+}
+.payments-subheading b {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-yellow);
+}
+.payments-content {
+  padding: 2rem;
+  color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: var(--color-black);
+}
+.payments-content:hover {
+  -webkit-box-shadow: 0 0 1rem var(--color-shadow);
+          box-shadow: 0 0 1rem var(--color-shadow);
+}
+.payments-type {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.payments-bullet {
+  color: var(--color-yellow);
+  margin-bottom: 1.2rem;
+}
+.payments-bullet b {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footer {
+  margin: 2rem 0;
+}
 .footer-brands {
   display: -webkit-box;
   display: -ms-flexbox;
