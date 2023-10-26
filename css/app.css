@@ -1186,53 +1186,7 @@ body {
   list-style: disc;
 }
 
-.payments-card {
-  max-width: 600px;
-  text-align: center;
-  margin: 0 auto;
-}
-.payments-header {
-  margin-bottom: 2rem;
-}
-.payments-heading {
-  font-size: 2rem;
-  font-weight: 600;
-}
-.payments-subheading {
-  font-size: 1.2rem;
-}
-.payments-subheading b {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-yellow);
-}
-.payments-content {
-  padding: 2rem;
-  color: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 1rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  background-color: var(--color-black);
-}
-.payments-content:hover {
-  -webkit-box-shadow: 0 0 1rem var(--color-shadow);
-          box-shadow: 0 0 1rem var(--color-shadow);
-}
-.payments-type {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-.payments-bullet {
-  color: var(--color-yellow);
-  margin-bottom: 1.2rem;
-}
-.payments-bullet b {
-  color: var(--color-white);
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
+/* @import 'components/payments'; */
 .footer {
   margin: 2rem 0;
 }
